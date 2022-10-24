@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        tag select per effettuare una scelta tra varie opzioni in un menù, si usa con il tag option
+        tag textarea permette di inserire all'interno molto testo, si possono usare cols e rows per renderlo più grande o piccolo ma si può fare con css
+        tag input per inserire testo come nome cognome o numero di tel
+        tag button se associato ad un form e premuto lo attiva-->
+    
+    <form method="post" action="inviamail.php">
+        <input type="text" name="nome" placeholder="Inserisci il nome">
+        <input type="password" name="password" placeholder="Password">
+        <input type="number" name="numero" placeholder="Numero">
+
+        <label for="consenso"> Accetto il trattamento dei dati.</label>
+        <input id="consenso" name="consenso" type="checkbox">
+    <hr>
+        <select name="città">
+            <option value="">--</option>
+            <option value="Roma">Roma</option>
+            <option value="Milano">Milano</option>
+            <option value="Napoli">Napoli</option>
+        </select>
+    <hr>
+        <textarea name="messaggio" cols="30" rows="10"></textarea>
+
+        <!--type dentro button:
+        button lo rende fake
+        submit è quello di default
+        reset cancella i dati nel form-->
+        <button type="button">Invia</button>
+         <!--questo ha lo stesso risultato di--> 
+        <input type="button" value="Invia">
+
+    </form>
+
+    <!--tag nav per menu
+    tag header per intestazione
+    tag main per principale
+    tag aside per contenuto laterale
+    tag footer per fine pagina-->
+
+
+</body>
+</html>

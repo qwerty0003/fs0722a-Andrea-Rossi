@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <!-- "git commit -m "first commit"" da fare per creare un nuovo set di modifiche-->
+    <!-- "git add ." per aggiungere tutte le modifiche -->
+    <!--"git status" se è utto verde vuol dire che tutto è stato aggiunto-->
+    <!--"git push origin master" per mandare tutto online se questo non va provare ad usare il primo tag git commit -m ecc-->
+    
+    <style>
+        table td, table th{
+            border: 1px solid black;}
+        table{
+            width: 100%;
+        }
+    </style>
+
+    <!-- tabelle:
+        tag table
+        tag caption per descrizione
+        tag thead per intestazione
+        tag tfoot per fine tabella es:informazioni aggiuntive
+        tag tbody per il resto
+        tag tr righe colonna
+        tag td celle    -->
+   
+    <table>
+        <thead>
+            <tr><td>Nome</td><td>Cognome</td><td>Anni</td></tr>
+        </thead>
+        
+        <tbody>
+            <tr><td>Andrea</td><td>Rossi</td><td>26</td></tr>
+            <tr><td>Mattia</td><td>Magnani</td><td>30</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td>Numero utenti</td><td colspan="2">2</td></tr> 
+            <!--colspan per riempire la colonna se ne abbiamo bisogno, rowspan per riempire la riga-->
+        </tfoot>
+        <!--shortcut: tr*3>td*3 per avere una tabella con 3 tr e 3 td{scritta inside}-->
+    </table>
+
+    
+
+
+
+</body>
+</html>
