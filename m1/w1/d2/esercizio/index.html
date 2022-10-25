@@ -89,8 +89,10 @@
         <p>Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
 
         <form action="inviamail.php" method="post">
-            <input type="text" name="email" placeholder="Inserisci la tua email!">
-            <button type="reset">Iscriviti!</button>
+            <fieldset>
+                <input type="email" name="email" id="email" placeholder="Inserisci la tua email!" required>
+                <button type="reset">Iscriviti!</button>
+            </fieldset>
         </form>
 
         <hr>
