@@ -1,0 +1,29 @@
+#titolo {
+    font-size: x-large;
+}
+
+#menu {
+
+}
+
+hr {
+    border-top: 1px rgb(17, 184, 161)55, 255, 255);
+}
+
+#period {
+    font-size: x-large;
+}
+
+#home {
+    text-align: center;
+    background-color: aqua
+    pink;
+}
+
+table, td, tr {
+    border-bottom: 1px solid black;
+    width: 50%;
+    text-align: left;
+}
+
+tr:hover {background-color: coral;}
