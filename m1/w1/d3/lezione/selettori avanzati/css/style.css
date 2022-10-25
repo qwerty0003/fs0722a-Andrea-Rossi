@@ -1,0 +1,31 @@
+.check:checked + p{
+   background-color: yellow;
+} /* + p significa il primo elemento p che c'è dopo la cosa scritta prima di p*/
+
+.bottone + p{
+    border: 1px solid blue;
+}
+
+.mouse:hover{
+    background-color: bisque;
+}
+/*tilde ~ si scrive premendo ALT+1+2+6 dal tastierino numerico
+
+elemento ~ p significa tutte le p dopo l'elemento*/
+
+.mouse2:hover a{
+    color: red;
+}
+
+table tr:nth-of-type(even){ 
+    background-color: grey;
+}/*even pari, odd dispari*/
+
+table td:nth-of-type(1):hover{ 
+    background-color: yellow;
+}
+
+/*appare quello che scrivi in content after dopo o before prima*/
+table td:after{
+    content: "-css";
+}

@@ -1,0 +1,73 @@
+/*# per id
+  . per classe
+  niente per tag
+  * per selezionare tutto*/
+/* selettore(div)+ parentesi garffe{
+    proprietà o regole: valore; ci vuole sempre punto e virgola
+    proprietà o regole: valore;
+    proprietà o regole: valore;
+    proprietà o regole: valore;
+    }
+
+se uso un selettore generico come div, tutti i div della pagina saranno modificati
+
+in caso di conflitti la regola che appare più in basso vince, a meno che la specificità del selettore non sia più alta
+
+font-weight:bold o 600 testo grassetto, 400 font regular
+
+*/
+
+div{/*specificità 1*/
+    color: green;
+}
+
+.testoblu{/*specificità 10*/
+    color: blue;
+}
+
+#parola{/*specificità 100*/
+    font-weight: bold;
+    color: purple;
+}
+
+/*selezione multipla e gerarchica
+lo spazio significa "figlio di" da sinistra verso destra, se uso la virgola posso inserire più elementi*/
+div div, div span{ /*specificità 1+1 e 1+1, hanno 2 e 2 non 4 insieme*/
+    background-color: bisque;
+}
+
+#menu li{
+    background-color: red;
+}
+#menu li > ul li{
+    background-color: yellow;
+}
+
+*{
+    font-size: 2rem;
+}
+
+ul#menu{
+
+}
+
+
+/*Posso selezionare utilizzando più classi ed id per migliorare la specificità*/
+ul#menu.classe-prova.classe-prova2{
+
+}
+
+
+.quadrati-gialli div{
+ width: 100px;
+ height: 100px;
+ background-color: yellow;
+} 
+    /* !important specificità maggiore
+        non si usa important nel proprio codice!
+        esiste per rari casi in cui si usano codici css di altre persone*/
+
+.quadrati-gialli.quadrati-con-bordo div{
+    background-color: purple;
+    border: 1px solid black;
+}
