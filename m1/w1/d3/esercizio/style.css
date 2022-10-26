@@ -1,0 +1,50 @@
+:root{
+    font-family: 'Rubik', sans-serif;
+}
+
+
+body{
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    }
+
+.item{
+    text-align: justify;
+}
+
+.sottologo{
+    background-color: bisque;
+    align-content: space-around;
+    color: #107777;
+    border-top: 1px solid #107777;
+}
+
+.descrizione{
+    font-size: 0.7rem;
+    color: rgba(128, 128, 128,0.6);
+}
+
+.main1 p:last-child{
+    color: orangered;
+}
+
+.titolo{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.titolo2{
+    font-weight: 600;  
+}
+
+#video{
+    border: 1px white;
+    border-radius: 25px;
+}
+
+hr{
+    border: 1px solid #107777;
+}
