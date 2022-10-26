@@ -1,0 +1,75 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+
+
+
+
+#img-adattata img{
+    max-width: 100%;
+}
+
+/*
+img{
+    max-width: 100%;
+}
+
+*{
+    box-sizing:border-box;
+}
+*/
+
+
+#img-tagliata{
+    overflow: hidden;
+   
+}
+
+#img-tagliata img{
+    width: 200px;
+    margin-left: -56px;
+    margin-top: -46px;
+}
+
+#bg-adattato{
+    background-image: url(../img/download.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#bg-tagliato{
+    background-image: url(../img/download.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#bg1{
+    background-image: url(../img/download.png);
+    background-size: 50px;
+    background-position: 0px;
+}
+
+#bg2{
+    background-image: url(../img/download.png), url(../img/css.png);
+    background-size: 40px, 35px;
+    background-position: 0 58px, 58px 0;
+    background-repeat: repeat-x, repeat-y;
+}
+
+section{
+    height: 500px;
+    background-image: url(../img/download.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#grad1{
+    background: rgb(29,201,203);
+    background: radial-gradient(circle, rgba(29,201,203,1) 0%, rgba(75,157,34,1) 59%, rgba(238,180,55,1) 100%);
+    box-shadow: 3px 1px 15px black, 0px 18px 60px red;
+    margin-bottom: 10px;
+} 
+/*si usa un tool per creare il gradient più velocemente*/

@@ -1,0 +1,40 @@
+.quadrato{
+    background-color: red;
+    border: 1px solid black;
+}
+
+#q1, #q3, #q4, #q5{
+    width: 100px;
+    height: 100px;
+}
+
+#q2{
+    max-width: 600px;
+    min-height: 50px;
+}
+
+#q3{
+    /*overflow: hidden;*/
+    overflow-y: auto;
+}
+
+#q4{
+    padding: 15px;
+    box-sizing: border-box;/*fa si che il padding venga ritagliato all'interno dell'elemento*/
+}
+
+#q5{
+    border: 10px dashed rgba(0, 0, 0, 0.2);
+    border-radius: none;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 100%;
+
+    margin: 100px; /*può essere anche un valore negativo*/
+    
+}
+
+.full-height{
+    background-color: yellow;
+    width: 100%;
+    height: 10vh;
+}
