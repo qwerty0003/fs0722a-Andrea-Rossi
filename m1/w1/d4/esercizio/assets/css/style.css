@@ -10,11 +10,12 @@ body{
 .sezione{
     width: 370px;
     margin-left: 16px;
+    margin-bottom: 10px;
 }
 
 /* HEADER */
 #header1{
-    margin: 0 10px;
+    margin: 10px 10px;
     text-align: center;
     background: rgb(29,201,203);
     background: linear-gradient(176deg, rgba(29,201,203,1) 0%, rgba(34,121,157,1) 86%); 
