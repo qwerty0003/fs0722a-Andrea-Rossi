@@ -1,0 +1,156 @@
+/* Your styles here 
+setto una larghezza di 500px per avere un sito mobile e notando che tutti i testi nel mockup sono centrati io l'ho fatto qui */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+body{
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    line-height: 1.65;
+    margin: 0 auto;
+}
+
+
+/*ora cerco di rendere il logo più simile possibile al mockup*/
+#logo{
+    background-color: black;
+    height: auto;
+}
+
+.logoimg{
+    width: 50%;
+    height: auto;
+}
+/*ho inserito il mio h1 il testo e il button ed ora creo graficamente la sezione*/
+
+#sezione1{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+ h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #25a2c3;
+    line-height: 1;
+    font-size: 2.5rem;
+    font-weight: bold;
+ }
+
+ #button:link{
+    background-color: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    border: none; 
+    border-radius: 5px;
+    padding: 13px 35px;   
+    transition-duration: 0.4s;
+    text-decoration: none;
+ }
+
+ #button:visited{
+    background-color:#f04c2f;
+    color:white;
+    text-decoration: none;
+ }
+
+ #button:hover{
+    background-color: #c8e7f0;
+    color: #f04c2f;
+    text-decoration: none;
+ }
+
+
+ /*finita la seconda sezione di main in html ora la faccio in css */
+  .titoletti{
+    font-family: 'Montserrat', sans-serif;
+    color: #25a2c3;
+    line-height: 1.5;
+    padding: 0 0 10px 0;
+  }
+  .sottosez2{
+    margin: 20px 0 20px 0;
+  }
+  .sezione2{
+    padding: 20px 0 40px 0 ;
+  }
+  #imgtonda{
+    border-radius: 50%;
+    height: auto;
+    width: 60%;
+}
+/*compilo il foglio di stile per la mia sezione testimonianza*/
+.sezionerossa{
+    background-color: #e22d0e;
+}
+.sezred{
+    color: white;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;  
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 70px 0 20px 0;
+}
+#quote{
+    font-style: italic;
+}
+
+#lilred{
+    padding-top: 0;
+    font-size: 0.8rem;
+    padding: 0 0 40px 0;
+} 
+/*andrò a modificare ora la mia ultima sezione 
+prima sistemo per bene i div e poi le mie immagni*/
+.sezionelil{
+    padding:60px 40px 30px 40px;
+}
+.sottosezione4{
+    border: 1px solid #dee1e3;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    padding-bottom: 25px;
+}
+  
+
+.img4{
+    width: 100%;
+    height: auto;
+
+}
+
+/*vado a stilizzare il mio footer*/
+#foot{
+    background-color: #25a2c3;
+}
+.fa-solid{
+    color: white;
+}
+.foot{
+    color:#c8e7f0;
+    padding-bottom: 20px;
+}
+#foottitle{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;  
+    font-weight: bold;
+    font-size: 2rem;
+}
+a{
+    color: #c8e7f0;
+}
+
+#lastitem{
+    padding: 20px 0 50px 0;
+}
+
+hr{
+    width: 50%;
+    color: #c8e7f0;
+}
