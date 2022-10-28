@@ -87,6 +87,11 @@ body{
 .sezionerossa{
     background-color: #e22d0e;
 }
+.sezionerossa:hover{
+    background: rgb(131,58,180);
+    background: linear-gradient(335deg, rgba(131,58,180,1) 0%, #e22d0e 50%, rgba(252,176,69,1) 100%);
+}
+
 .sezred{
     color: white;
 }
@@ -128,7 +133,8 @@ prima sistemo per bene i div e poi le mie immagni*/
 
 /*vado a stilizzare il mio footer*/
 #foot{
-    background-color: #25a2c3;
+    background: rgb(29,201,203);
+    background: linear-gradient(176deg, rgba(29,201,203,1) 0%, rgba(30,138,176,1) 46%, rgba(29,52,163,1) 100%); 
 }
 .fa-solid{
     color: white;
