@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variabili</title>
+</head>
+<body>
+   
+    
+
+
+
+
+
+    
+
+
+
+
+    <!--una variabile è un contenitore di info, un punto dove le posso salvare
+   
+        REGOLA DI NAMING:scritta in modo tipo mioNome ovvero se ci sono più parole ogni nuova ha la prima maiuscola ma non la prima, se c'è un numero non va mai all'inizio
+        var lo uso la prima volta che uso una variabile
+        = è operatore di assegnamento
+    -->
+  <script>
+    
+    var a; //ha valore undefined
+    console.log(a);
+
+    a = 6;
+    console.log(a); //6, dalla riga 30 in poi a ha valore 6
+
+
+    var x = 1;
+    console.log(x); // ha valore 1
+    x = 2;
+    console.log(x); // ha valore 2
+
+    var y = 1, u = 1;// creo due var in una sola riga
+    console.log(u + y);    
+
+    /* tipi di dato */
+
+    var numero = 5; //variabile numerica
+    var stringa = 'Ciao';//stringa
+    var array = [1,2,3,'ciao',[]]// array ossia una lista di valori senza nomi
+    var oggetto = {
+        nome:'Mario',
+        cognome:'Rossi',
+        anni: 30
+    } //una lista di valori che ha un nome, all'interno dell'ogetto uso i due punti come operatore di assegnamento
+     
+    var booleano = true;//true or false
+
+    console.log(typeof stringa) //per controllare che tipo di variabile è
+
+          /*mescoliamo tutto*/
+
+          var booleano2 = 'true'; //non è un boolean ma una stringa
+          var numero2 = '5'; //di nuovo stringa
+
+/*concatenamento*/
+
+    var saluto = 'ciao'
+    var nome = 'marco'
+    //usando l'operatore + su 2 stringhe ottengo un concatenamento
+    console.log(saluto + nome)
+    console.log(saluto + ' ' + nome)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          /*parkour*/
+
+    var t = 2;
+    var k = '2'
+    var l = '2a'
+    console.log(t + k)// t viene convertita in stringa e quindi avviene un concatenamento
+    console.log(t * k)//in questo caso rende la stringa(contenente solo numeri) una variabile numero, avremo quindi la moltiplicazione normale tra numeri
+    console.log(t * l)//non posso moltiplicare 2(number) per 2a(string) e quindi ottengo NaN che indica che l'operazione non è possibile
+
+
+
+
+
+
+
+
+
+
+   
+
+
+  </script>  
+</body>
+</html>
