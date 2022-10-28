@@ -212,3 +212,5 @@ hr{
     width: 50%;
     color: #c8e7f0;
 }
+
+/*NOTA se apro il sito cliccando semplicemente 2 volte sul file html mi apre la pagina con i font piccoli, invece se la apro da vscode con live server le dimensioni sono esatte come le ho settate io*/
