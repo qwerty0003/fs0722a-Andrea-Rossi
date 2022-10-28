@@ -36,6 +36,8 @@ body{
     line-height: 1;
     font-size: 2.5rem;
     font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
  }
 
  #button:link{
