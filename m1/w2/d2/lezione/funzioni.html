@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        // una funzione è un set di istruzioni
+        // è formata da due fasi inizializzazione e lancio
+        function saluta(){
+            document.write('ciao')
+        } //inizializzazione
+        
+        //le funzioni sono soggette ad hoisting
+        saluta() //lancio
+        
+        function salutoBold(){
+            return `<b>Ciao</b>`
+        }   
+
+        let saluto = salutoBold();
+        console.log(saluto)
+        document.write(saluto)
+
+        //funzioni parametriche
+
+        function testoBold(testo){
+            return `<b>${testo}</b>`
+        }
+        let testoB = testoBold('evviva il bold')
+        console.log(testoB)
+
+        function testoTag(testo, nomeTag){
+            return `<${nomeTag}>${testo}</${nomeTag}>`
+        }
+        document.write(testoTag ('tag1','div'))
+        document.write(testoTag ('tag2','span'))
+
+        function somma(a,b){
+            return a + b
+        }
+        console.log(somma(4,7))
+
+        function isEven(numero){
+            return numero % 2 == 0
+        }
+        console.log( isEven(3) )
+
+
+    </script>
+</body>
+</html>

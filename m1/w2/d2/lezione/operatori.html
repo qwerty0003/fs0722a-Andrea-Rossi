@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+<script>
+
+    let a = 2
+    let b = a + a //4
+
+    b = 2 // b sarà 2; sto riassegnado il valore di b
+    console.log(b)
+    
+    b += 2; // 2 + 2 = 4; sto incrementando di 2 il valore di b 
+    console.log(b)
+
+    b -= 2; //sto decrementando il valore di b
+    console.log(b)
+
+    b *= 2 //moltiplico il valore di b per 2
+    console.log(b)
+
+    b /= 2 //divido b per 2
+    console.log(b)
+
+    //concatenamento
+
+    let html = ' ';
+    html += '<div>'
+    html += 'ciao'
+    html += '</div>' //per le stringhe posso usare solo += per concatenare
+
+    console.log(html)
+
+
+    //CONFRONTO
+    let c = 10
+    console.log(c > 10) //vedo se c è maggiore di 10
+    console.log(c >= 10)//vedo se c è maggiore o uguale a 10
+    console.log(c == 10)//vedo se c è uguale a 10
+    console.log(c != 10)//vedo se c è diverso a 10
+    
+    
+    console.log(c < 100 && c > 5)//vedo se c è contemporaneamente minore di 100 e maggiore di 5, per avere true servono entrambe le condizioni vere
+
+    console.log(c < 100 || c > 5)//vedo se c è minore di 100 oppure maggiore di 5, serve una sola condizione soddisfatta per avere true
+   
+   
+    console.log(!(c < 100)) //in questo caso si verifica il contrario della condizione
+
+
+    // === significa strettamente uguale
+
+        let r = 5
+        let t = '5'
+        console.log(r == t)// deve essere uguale il valore, il tipo di dato può essere diverso
+        console.log(r === t)// devono essere uguali sia il valore che il tipo di dato
+        console.log(r !== 5)// vero se il dato e/o il tipo di dato sono diversi
+
+        let str = '';
+        if(str){ //stringa vuota mappa a false
+            console.log('non vedrai questo messaggio')
+        }
+        let num = 0
+        if(num){ // zero mappa a false
+            console.log('non vedrai questo messaggio')
+        }
+
+        //operatore ternario
+        let anni = 30
+        let accesso = anni >= 18 ? 'consentito' : 'non consentito' //dopo il ? cosa succede se la condizione è vera dopo i : cosa succede se la condizione è falsa <-- operatore ternario
+        console.log(accesso)
+
+        let htmlElement = document.getElementById('test') || '<div></div>'; // operatore di coalescenza || queste due sbarre
+        
+        
+        //posso andare a capo prima del puntino se la stringa è troppo lunga
+        let htmlElement = document
+        .getElementById('test') || '<div></div>'; // operatore di coalescenza || queste due sbarre
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        let oggetto = {}
+
+       {  //le metto in un blocco così posso utilizzare lo stesso nome sotto
+        let diavola = {
+            gusto:'Diavola',
+            prezzo:1,
+            mostraPrezzo : function(){}
+        }
+        let margherita = {
+            gusto:'Margherita',
+            prezzo:5
+        }
+    }
+        //costruttore dell'oggetto
+        function Pizza(g,p){ // g e p sono parametri
+            this.gusto = g;
+            this.prezzo = p;
+        } //this all'interno del costrutt dell'oggetto diventa la variabile che creeremo
+
+        let margherita = new Pizza('Margherita', 5);
+        let diavola = new Pizza('Diavola', 1);
+        console.log(margherita, diavola)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

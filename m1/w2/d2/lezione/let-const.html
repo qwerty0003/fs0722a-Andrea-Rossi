@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lezione su let e costanti</title>
+</head>
+<body>
+    
+
+
+<script>
+
+
+    var x = 0
+
+    {     //dentro 2 parentesi graffe c'è sempre un blocco
+        console.log(x)
+    }
+
+    let y = 0
+    {
+        console.log(y)
+    }
+
+    {
+        let u = 1 // variabile let è soggetta a blockscope, ovvero se è in un blocco non può venirne fuori
+    }
+    //console.log(u) darà un errore
+
+
+    let i = 2
+    {
+        //console.log(i) non ancora nato nel blocco quindi darà errore
+        let i = 3
+        console.log(i)
+    }
+    console.log(i)
+
+    //hoisting significa che viene cercata una variabile prima e dopo e viene sollevata
+
+    /******************* 
+     * const
+     * **********************/
+    // per le costanti si scrive tutto maiuscolo e con i trattini bassi KEBAB CASE
+     const NOME_COSTANTE = 6
+     // NOME_COSTANTE = 7 darà errore, una costante non può cambiare
+     // le costanti sono anche loro blockscope
+     console.log(NOME_COSTANTE)
+
+     const PIZZA = {
+        gusto:"Margherita",
+        prezzo: 5
+     } //non posso cambiare la costante pizza ma un valore al suo interno si
+     PIZZA.gusto = 'Capricciosa'
+     console.log(PIZZA)
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
