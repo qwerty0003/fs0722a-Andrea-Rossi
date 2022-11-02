@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+
+
+
+
+    <script>
+
+      let obj = {}  
+
+
+
+
+
+
+
+        {
+            let pizza = {
+                gusto: 'Margherita',
+                prezzo: 5,
+                mostraPrezzo: function(valuta){ //una funzione all'interno di un oggetto si chiama metodo
+                    console.log(`Il prezzo della pizza ${this.gusto} è di ${this.prezzo}${valuta}`)
+                }
+            }
+            console.log(pizza.gusto)
+            console.table(pizza)
+            pizza.gusto = 'Diavola'
+            console.log(pizza.gusto)
+            console.table(pizza)
+
+            pizza.mostraPrezzo('$') //metodo di pizza
+
+            //posso avere due funzioni con lo stesso nome se una delle due è un metodo, ovvero dentro un oggetto
+        }
+
+
+        {
+            function Pizza(_gusto, _prezzo){
+                this.gusto = _gusto;
+                this.prezzo = _prezzo;
+                this.mostraPrezzo = function(valuta){
+                    console.log(`il prezzo della pizza ${this.gusto} 
+                    è di ${this.prezzo}${valuta}`)
+                }
+            }
+
+                let margherita = new Pizza('Margherita',5)
+                let diavola = new Pizza ('Diavola',1)
+                let capricciosa = new Pizza ('Capricciosa',11)
+                
+                margherita.mostraPrezzo('£')
+                diavola.mostraPrezzo('$')
+                capricciosa.mostraPrezzo('€')
+
+                Pizza.prototype.stile = 'Napoletana';
+                console.log(margherita)
+                console.log(diavola)
+                console.log(capricciosa) }
+
+
+
+
+    </script>
+</body>
+</html>

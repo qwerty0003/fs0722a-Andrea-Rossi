@@ -13,9 +13,9 @@ console.log(maximum(array))
 /*let x = 4
 let y = 7
 if(x > y){
-  console.log('il numero più grande è' x )
+  console.log('il numero più grande è', x )
 }else if(x < y){
-  console.log('il numero più grande è' y )
+  console.log('il numero più grande è', y )
 }else{
   console.log('i numeri sono uguali')
 }*/
@@ -39,11 +39,18 @@ if(x1 !== 5){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-/*const number = prompt("Inserisci un numero: ");
+/* mia risposta:
+const number = prompt("Inserisci un numero: ");
 
 if (number % 5 == 0) {
   console.log("divisibile per 5");
 }          */
+
+/* aggiunta durante la correzione
+let x2 = 15
+if(x2 % 5 == 0){
+  console.log('divisibile per 5')
+}   */
 
 
 
@@ -89,16 +96,52 @@ function blackFry(number){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+/*let z1=6;
+  let z2=14;
+  let z3=10;
+
+    if(z1>=z2){
+      if(z3>=z1)
+    {
+      console.log(z3,z1,z2);
+    }
+      else  if(z3>=z2)
+    {
+      console.log(z1,z3,z2);
+      }
+
+        else 
+      {
+        console.log(z1,z2,z3);
+       }
+          }
+      else if (z3>=z2)
+     {
+        console.log(z3,z2,z1);
+      }
+       else if(z2>=z1)
+       {
+       console.log(z2,z3,z1);
+       }
+        else
+       {
+        console.log(z2,z1,z3);
+       } SOLUZIONE FROM LUCA TA durante correzione*/
 
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA 
+/* SCRIVI QUI LA TUA RISPOSTA */
 
-const typecheck = prompt("Inserisci qualcosa: ");
-console.log(typeof typecheck) */
+let typeCheck = 67
+console.log(typeof typeCheck) 
+if(typeof typeCheck === 'number'){
+  console.log('è un numero')
+}else{
+  console.log('non è un numero')
+}
 
 
 /* ESERCIZIO 9

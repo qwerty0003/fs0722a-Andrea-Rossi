@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+
+        let arr = []
+        let numeri = [10, 50, 90, 663]
+
+        console.log(numeri[0])
+        console.table(numeri)
+        numeri[0] = 70
+        console.table(numeri)
+
+        //lenght si usa su stringhe ed array per ottenerne un numero pari alla lunghezza dello stesso
+        console.log( numeri.length )
+        console.log('ciao'.length)
+        console.log(numeri[numeri.length-1]) // ottengo sempre l'ultimo elemento dell'array
+
+
+
+        let str = 'ciao'
+        console.log(str.length)
+        console.log(str[0])
+
+        //scoprire il tipo di dato
+        
+        numeri = [10, 768, 90, 663]
+        console.log(typeof (numeri)) //typeof restituisce object su un array
+        console.log(Array.isArray(numeri))// per avere certezza che il dato sia un array si usa questo metodo
+
+        if(numeri[6]){
+            numeri[6] = 800
+        }
+        console.log(numeri)
+        
+
+
+
+        //metodi array
+        let numeriOrdinati = numeri.sort(function(a,b){
+            return a - b // questa funzione di callback fa in modo che i numeri si ordinino in ordine numerico e non alfabetico, per un ordine inverso si può utilizzare b - a
+        })
+        console.log(numeriOrdinati)
+
+
+
+        //dalla fine
+        numeri.push(202) //aggiunge alla fine dell'array
+        console.log(numeri)
+        numeri.pop() // elimina dalla fine dell'array
+        console.log(numeri)
+
+        //dall'inizio
+        numeri.unshift(20) // aggiunge all'inizio
+        console.log(numeri)
+        numeri.shift() // elimina all'inizio
+        console.log(numeri)
+
+        //eliminazione/sostituzione da un indice a scelta
+        numeri = [10, 768, 90, 663]
+        console.log(numeri)
+        
+        
+        let start = 1
+        let qty = 1
+        numeri.splice(start,qty) //elimino il 768
+        console.log(numeri)
+        numeri.splice(start,qty,44444) // elimino il 90 ed inserisco 44444 al suo posto
+        console.log(numeri)
+
+
+
+
+
+    </script>
+</body>
+</html>

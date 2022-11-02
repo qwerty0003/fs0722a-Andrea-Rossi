@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select id="frutti" onchange="mostraPrezzo()">
+        <option value="">-----</option>
+        <option value="Mele">Mele</option>
+        <option value="Banane">Banane</option>
+        <option value="Ananas">Ananas</option>
+        <option value="Ciliegie">Ciliegie</option>
+    </select>
+    <div id="prezzo"></div>
+
+
+
+
+    <script>
+
+        function mostraPrezzo() {
+
+            let frutta = document.getElementById('frutti').value
+            let messaggio
+            switch (frutta) {
+                case 'Mele':
+                    messaggio ='Le ' + frutta + ' costano 0.50€'
+                    break
+                case 'Banane':
+                    messaggio ='Le ' + frutta + ' costano 0.99€'
+                    break
+                case 'Ananas':
+                messaggio ='Gli ' + frutta + ' costano 2€'
+                case 'Ciliegie':
+                    messaggio ='Le ' + frutta + ' costano 2€'
+                    break
+                default:
+                    messaggio ='Non abbiamo ' + frutta
+            }
+            document.getElementById('prezzo').innerHTML = messaggio
+        }
+    </script>
+</body>
+
+</html>
