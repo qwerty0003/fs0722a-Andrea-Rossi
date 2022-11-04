@@ -1,0 +1,77 @@
+body{
+    background-color:#323232 ;
+    font-family: 'Source Code Pro', monospace;
+}
+/* stilizzo il titolo della calcolatrice */
+.title {
+    margin-bottom: 10px;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight:bold;
+    text-align:center;
+    width: 470px;
+    color:#afadad;   
+}
+
+.title:hover{
+    color: rgba(255, 0, 187, 0.5);
+}
+ 
+/* setto grandezza e colore della mia calcolatrice */
+#calcolatrice {
+    font-size: 30px;
+    display: inline-block;
+    width: 470px;   
+    justify-content: center;
+    background: rgb(0,1,1);
+    background: linear-gradient(164deg, rgba(0,1,1,1) 0%, rgba(18,58,78,1) 65%, rgba(22,111,142,1) 100%);   
+}
+
+ /* setto il display */
+#numeri {
+    background-color: rgba(0, 213, 255, 0.055);
+    border: 1px solid rgba(255, 0, 187, 0.5);
+    color: rgb(24, 166, 55);
+    width: 455px;
+    height: auto;
+    margin: 0 0 13px 5px;
+    text-align: center;
+    height: 30px;
+    font-size: 1.5rem;
+}
+
+
+
+#numeri:hover{
+    background-color: #384e64;
+    border: 0.7px solid black;
+}
+
+/* e qui setto i pulsanti della calcolatrice */
+
+.bottoni{
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    border: 0.5px dotted rgba(255, 0, 187, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin-left: 3px;
+    font-size: 1rem;
+    
+}
+
+.bottoni:hover{
+    border: 0.7px solid black;
+    background-color:#384e64;
+}
+/* il mio uguale è da solo in basso e lo voglio fare più largo */
+#uguale{
+    width: 455px;
+    margin-top: 13px;
+    font-size: 1.7rem;
+}
+/*il mio bottone cancella tutto deve riempire tutto lo spazio che rimane vuoto*/
+#deleteAll{
+    width: 360px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcolatrice</title>
+</head>
+<body>
+    <div class="title" onclick="hideIt()">La mia calcolatrice in JS</div>
+    <div id="calcolatrice" class="contenitore">
+        <input type="text" id="numeri">
+        <div class="bottoni" data-simbolo="1" onclick="aggiungiCifra(this)">1</div>
+        <div class="bottoni" data-simbolo="2" onclick="aggiungiCifra(this)">2</div>
+        <div class="bottoni" data-simbolo="3" onclick="aggiungiCifra(this)">3</div>
+        <div class="bottoni" data-simbolo="4" onclick="aggiungiCifra(this)">4</div>
+        <div class="bottoni" data-simbolo="5" onclick="aggiungiCifra(this)">5</div>
+        <div class="bottoni" data-simbolo="6" onclick="aggiungiCifra(this)">6</div>
+        <div class="bottoni" data-simbolo="7" onclick="aggiungiCifra(this)">7</div>
+        <div class="bottoni" data-simbolo="8" onclick="aggiungiCifra(this)">8</div>
+        <div class="bottoni" data-simbolo="9" onclick="aggiungiCifra(this)">9</div>
+        <div class="bottoni" data-simbolo="0" onclick="aggiungiCifra(this)">0</div>
+        <div class="bottoni" data-simbolo="00" onclick="aggiungiCifra(this)">00</div>
+        <div class="bottoni" data-simbolo="+" onclick="aggiungiCifra(this)">+</div>
+        <div class="bottoni" data-simbolo="-" onclick="aggiungiCifra(this)">-</div>
+        <div class="bottoni" data-simbolo="*" onclick="aggiungiCifra(this)">x</div>
+        <div class="bottoni" data-simbolo="/" onclick="aggiungiCifra(this)">/</div>
+        <div class="bottoni" data-simbolo="." onclick="aggiungiCifra(this)">.</div>
+        <div class="bottoni" data-simbolo="(" onclick="aggiungiCifra(this)">(</div>
+        <div class="bottoni" data-simbolo=")" onclick="aggiungiCifra(this)">)</div>
+        <div class="bottoni" data-simbolo="[" onclick="aggiungiCifra(this)">[</div>
+        <div class="bottoni" data-simbolo="]" onclick="aggiungiCifra(this)">]</div>
+        <div class="bottoni" data-simbolo="sin" onclick="sin()">sin</div>
+        <div class="bottoni" data-simbolo="cos" onclick="cos()">cos</div>
+        <div class="bottoni" data-simbolo="tan" onclick="tan()">tan</div>
+        <div class="bottoni" data-simbolo="x^2" onclick="square()">x<sup>2</sup></div>
+        <div class="bottoni" data-simbolo="x^3" onclick="cubed()">x<sup>3</sup></div>
+        <div class="bottoni" data-simbolo="sqrt2" onclick="sqrt2()">&radic;</div>
+        <div class="bottoni" data-simbolo="sqrt3" onclick="sqrt3()">&#8731;</div>
+        <div class="bottoni" data-simbolo="E^x" onclick="exp()">E<sup>x</sup></div>
+        <div class="bottoni" data-simbolo="log" onclick="log()">log<sub>2</sub></div>
+        <div class="bottoni" data-simbolo="ln" onclick="ln()">ln</div>
+        <div class="bottoni" onclick="back()">C</div>
+        <div class="bottoni" id="deleteAll" onclick="allback()">CE</div>
+        <div class="bottoni" id="uguale" onclick="tot()">=</div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
