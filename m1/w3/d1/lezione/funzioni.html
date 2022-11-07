@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+{
+          function nomeFunzione(){
+            return 'testo' //la keyword return blocca l'esecuzione della funzione            
+        }
+
+        function sostituisciVirgole(testo){
+            if(typeof testo == 'string'){
+            let testoConPunti = testo.replaceAll(',','.')
+            return testoConPunti
+            }else{
+                throw new Error('La funzione sostituisciVirgole richiede una stringa, hai inserito un dato di tipo: '+ typeof testo)
+            }
+        }
+
+        console.log(sostituisciVirgole('ciao,,,punto,,'))
+}
+
+{
+    function moltiplica(a,b){
+        return a * b
+    }
+    console.log(moltiplica(5,7))
+}
+
+{       //usando spread operator
+        function moltiplicaPro(...numeri){
+        let moltiplicazione = 1
+        for(let numero of numeri){
+            moltiplicazione *= numero
+        }
+        return moltiplicazione
+        }
+    
+    console.log(moltiplicaPro(6,7,8,9,11))
+}
+
+
+{
+    function moltiplicazioneProUltra(...numeri){
+        return numeri.reduce(function(c,p){
+        return c * p
+        })
+    }
+    console.log(moltiplicazioneProUltra(5,6,7,8,9,10))
+}
+    //gestione valori numerici
+
+
+{
+        function somma(a,b){
+        if((!a || !b) && (a != 0 && b != 0))
+            return 'Err'
+        
+        return a + b
+    }
+
+    console.log(somma())
+}
+
+{
+    //una funzione anonima che si auto-esegue
+    let dato = (function(){
+        console.log('eseguita')
+        return 'ecco il dato' //la variabile dato conterrà questa stringa
+        })()
+
+    console.log(dato)
+}
+
+    //closures
+{
+    function aa(){
+        var x = 0
+        function bb(){
+            console.log(x)
+        }
+        bb()
+    }
+    aa()
+}
+
+{
+    function a(x){
+        return function b(y){
+            return function c(z){
+                return x + y + z
+            }
+        }
+    }
+   let risultato = a(5)(7)(6)
+   console.log(risultato)
+}
+
+    //funzioni freccia
+{   //le prime due sono funzioni one-line
+    //bisognerebbe utilizzare const per le funzioni freccia
+    let nomeFunzioneFreccia = () => 'testo' // viene considerato come una variabile contenente una funzione anonima
+    console.log(nomeFunzioneFreccia())
+    
+    let funzioneConParametro = a => a*2
+    //se c'è un solo parametro posso eliminare le tonde
+    console.log(funzioneConParametro(2))
+    
+    let funzioneConParametri = (a,b) => a * b
+    console.log(funzioneConParametri(2,3))
+
+    let funzioneLunga = () => {
+        let a = 'testo'
+        return a
+    }
+    console.log(funzioneLunga())
+}
+
+
+
+
+    </script>
+</body>
+</html>

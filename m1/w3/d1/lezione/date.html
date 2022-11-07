@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsII d1</title>
+</head>
+<body>
+    
+    <div id="time"></div>
+
+    <!--
+    DOCUMENTAZIONE:
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+    -->
+
+
+    <script>
+    // date ci da un output di tipo stringa
+    {
+        let now = new Date()
+        let minuti = now.getMinutes()
+        let ore = now.getHours()
+        let secondi = now.getSeconds()
+        
+        let mesi = now.getMonth() //il conto dei mesi è quello degli array quindi gennaio sarà 0
+        let indiceGiorno = now.getDay()// conteggio dei giorni settimanali partendo da domenica 0 a sabato 6
+        let giorno = now.getDate()//numero giorno mensile
+        let anno = now.getFullYear()
+        
+        console.log(`${ore}:${minuti}:${secondi}`)
+
+        let timeStamp = now.getTime()
+        console.log(timeStamp)
+    }
+    //serve ad eseguire ogni tot secondi una determinata funzione
+        
+        setInterval(function(){
+          
+            let ora = new Date()
+          
+            document.getElementById('time').textContent = ora  
+        
+        },1000) 
+
+        {
+            let future = new Date()
+
+            //imposto la data ad un mese da oggi
+            future.setMonth(future.getMonth() + 1)
+            console.log(future)
+
+            
+        }
+
+        {
+            let data = new Date()
+            let options ={
+                weekday:'long',
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            }
+            console.log(data.toLocaleDateString('it-IT',options))
+            //per mostrare una data nel formato del locale scelto
+        }
+        
+        
+
+    </script>
+</body>
+</html>
