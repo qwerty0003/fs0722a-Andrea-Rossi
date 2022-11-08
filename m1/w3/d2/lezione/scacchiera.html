@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #scacchiera{
+            width: 500px;
+            height: 500px;
+        } 
+        .casella{
+            width: calc(100% / 8);
+            height: calc(100% / 8);
+            border: 1px solid black;
+            display: inline-block;
+            margin-bottom: -0.3rem;
+            margin-left: -0.3rem;
+            text-align: center;
+            color: red;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <div id="scacchiera"></div>
+
+    <script>
+
+        let scacchiera = document.getElementById('scacchiera')
+
+        
+
+        for(let i = 0;i < 8;i++){
+            for(let x = 0;x < 8;x++){
+                let colore = (i + x) % 2 ? '#000' : '#fff'
+                //da qui è come fare il metodo commentato
+                let casella = document.createElement('div')
+                casella.classList.add('casella')
+                casella.style.backgroundColor = colore
+                scacchiera.append(casella)                
+                //scacchiera.innerHTML += '<div class="casella" style="color:red; background-color:'+colore+'">'+i +'-'+ x+'</div>'
+            }
+        }
+
+    </script>
+
+</body>
+</html>
