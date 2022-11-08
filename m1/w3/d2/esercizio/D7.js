@@ -153,6 +153,14 @@ console.log(arr)
   let array = ['epicode','ciao','ciaociaociao']
   sostituisciStr(array)
 }
+{
+  const funzione8 = (arr) => {
+    let lunghezzaEle = arr.map((ele) => ele.length)
+    return lunghezzaEle
+  }
+  let array = ['epicode','ciao','ciaociaociao']
+  console.log(funzione8(array))
+}
 /* ESERCIZIO 9 (EXTRA)
   Scrivi una funzione per eliminare solo i valori PARI da un array.
 */
