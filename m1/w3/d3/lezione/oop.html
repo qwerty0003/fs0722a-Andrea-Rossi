@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-   
+
     <script>
         {
-        let obj = {}// da preferire
-        let objOld = new Object()
+            let obj = {}// da preferire
+            let objOld = new Object()
 
-        let persona = {
-            nome:"Mario",
-            cognome:"Rossi",
-            anni:30
-        }
-        function Persona(n,c){
-            this.nome = n
-            this.cognome = c
-            this.cittadinanza = 'Italiana'
-            this.presentazione = () =>{
-                console.log(`Ciao, mi chiamo ${this.nome} ${this.cognome}`)
+            let persona = {
+                nome: "Mario",
+                cognome: "Rossi",
+                anni: 30
             }
-        }
-        let mario = new Persona()//non inserisco i dati perchè li voglio mettere dopo
-        mario.nome = 'Mario'
-        mario.cognome = 'Rossi'
-        console.log(mario)
-        mario.presentazione()
-
-        let lorenzo = new Persona('Lorenzo','Trozzo')//passo i valori direttamente nella fase di stanziamento
-        console.log(lorenzo)
-        lorenzo.presentazione()
-    }
-    console.log('============================================================================================================================================================')
-    {
-        //utilizzo di class
-        
-        // il constructor serve a definire e valorizzare le propietà di un oggetto 
-        class Utente{
-            constructor(n,c,u = 'Utente'){
+            function Persona(n, c) {
                 this.nome = n
                 this.cognome = c
-                this.ruolo = u
-                
-                
-                //esperimenti
-
-                console.log(`il nuovo utente ${n} ${c} è stato creato`)//tutto ciò che si trova tra le parentesi graffe del constructor viene eseguito in fase di istanziamento
-                this.presentazione()//in fase di istanziamento lancio il metodo di presentazione
+                this.cittadinanza = 'Italiana'
+                this.presentazione = () => {
+                    console.log(`Ciao, mi chiamo ${this.nome} ${this.cognome}`)
+                }
             }
+            let mario = new Persona()//non inserisco i dati perchè li voglio mettere dopo
+            mario.nome = 'Mario'
+            mario.cognome = 'Rossi'
+            console.log(mario)
+            mario.presentazione()
 
-            presentazione(){
-                console.log(`Ciao, mi chiamo ${this.nome} ${this.cognome}`)
-            }
+            let lorenzo = new Persona('Lorenzo', 'Trozzo')//passo i valori direttamente nella fase di stanziamento
+            console.log(lorenzo)
+            lorenzo.presentazione()
         }
-        let mario = new Utente('Mario','Rossi')
-        let lorenzo = new Utente('Lorenzo','Trozzo')
-        console.log(mario)
-        console.log(lorenzo)
-        mario.presentazione()
+        console.log('%c ============================================================================================================================================================================================', 'background-color:darkred')
+        {
+            //utilizzo di class
 
-        class Admin extends Utente{
-            constructor(n,m,t){
-                super(n,m,'Admin')
-                this.titolo = t
+            // il constructor serve a definire e valorizzare le propietà di un oggetto 
+            class Utente {
+                constructor(n, c, u = 'Utente') {
+                    this.nome = n
+                    this.cognome = c
+                    this.ruolo = u
+
+
+                    //esperimenti
+
+                    console.log(`il nuovo utente ${n} ${c} è stato creato`)//tutto ciò che si trova tra le parentesi graffe del constructor viene eseguito in fase di istanziamento
+                    this.presentazione()//in fase di istanziamento lancio il metodo di presentazione
+                }
+
+                presentazione() {
+                    console.log(`Ciao, mi chiamo ${this.nome} ${this.cognome}`)
+                }
             }
-        }
-        let amministratore = new Admin('Andrea','Rossi','Capo dell\'universo')
-        let amministratore2 = new Admin('Mario','Bianchi','Capo degli inventati')
-        console.log(amministratore)
-        console.log(amministratore2)
-        amministratore2.presentazione()
-    }
-    console.log('============================================================================================================================================================')
-    {
+            let mario = new Utente('Mario', 'Rossi')
+            let lorenzo = new Utente('Lorenzo', 'Trozzo')
+            console.log(mario)
+            console.log(lorenzo)
+            mario.presentazione()
 
-    }
-        
+            console.log('%c ============================================================================================================================================================================================', 'background-color:darkslategrey')
+
+            class Admin extends Utente {
+                constructor(n, m, t) {
+                    super(n, m, 'Admin')
+                    this.titolo = t
+                }
+            }
+            let amministratore = new Admin('Andrea', 'Rossi', 'Capo dell\'universo')
+            let amministratore2 = new Admin('Mario', 'Bianchi', 'Capo degli inventati')
+            console.log(amministratore)
+            console.log(amministratore2)
+            amministratore2.presentazione()
+
+            console.log('%c ============================================================================================================================================================================================', 'background-color:darkslategrey')
+
+            class SuperAdmin extends Admin {
+                constructor(n, m) {
+                    super(n, m, 'dev')
+                }
+            }
+            let superAmministratore = new SuperAdmin('Valerio', 'Pirolli')
+            console.log(superAmministratore)
+        }
+        console.log('%c ============================================================================================================================================================================================', 'background-color:darkred')
+        {
+
+        }
+
     </script>
 </body>
+
 </html>

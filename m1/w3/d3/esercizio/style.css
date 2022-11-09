@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.topList {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    padding: 30px 40px;
+    text-align: center;
+  }
+  
+  
+  .topList:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* stilizzo l'input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 10px;    
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
+  /* stilizzo il bottone */
+  .addBtn {
+    padding: 8px;
+    width: 25%;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 25px;
+    border: 1px solid;
+  }
+  
+  
+  .addBtn:hover {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+
+
+/*tolgo padding e margini dalla lista per non avere i cerchi neri affianco al nome*/
+ul{
+    margin: 0;
+    padding: 0; 
+}
+/*stilizzo la lista*/
+ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    transition: 1s;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    user-select: none;
+}
+ul li:nth-child(odd){
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+ul li:hover{
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+}
+ul li.checked{
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    border-color: black;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+/*stilizzo il bottone per eliminare*/
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px;
+}
+.close:hover {
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  }
+  
+  
+  
