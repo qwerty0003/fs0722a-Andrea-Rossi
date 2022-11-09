@@ -12,7 +12,7 @@ function newElement() {
     document.getElementById("inputItem").value = "";
   
     var span = document.createElement("span");
-    var testo = document.createTextNode("\u00D7");
+    var testo = document.createTextNode("\uD83D\uDDD9");
     span.className = "close";
     span.appendChild(testo);
     li.appendChild(span);
@@ -24,12 +24,13 @@ function newElement() {
       }
     }
   }
+
 // Creo un bottone cancella vicino ad ogni elemento della lista
 var elementoLi = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < elementoLi.length; i++) {
   var span = document.createElement("span");
-  var testo = document.createTextNode("\u00D7");
+  var testo = document.createTextNode("\uD83D\uDDD9");
   span.className = "close";
   span.appendChild(testo);
   elementoLi[i].appendChild(span);

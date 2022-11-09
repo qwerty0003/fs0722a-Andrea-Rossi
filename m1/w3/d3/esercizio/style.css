@@ -76,7 +76,7 @@ ul li.checked{
 ul li.checked::before{
     content: '';
     position: absolute;
-    border-color: black;
+    border-color: rgb(0, 0, 0);
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 10px;
@@ -91,9 +91,11 @@ ul li.checked::before{
     right: 0;
     top: 0;
     padding: 12px 16px;
+    color: darkred;
 }
 .close:hover {
     background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    color: black;
   }
   
   
