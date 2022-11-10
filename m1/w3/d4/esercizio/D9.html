@@ -18,13 +18,13 @@
     <hr />
 
     <ul id="firstList">
-      <li>Primo</li>
+      <li>Primo1</li>
       <li>Secondo</li>
       <li>Terzo</li>
     </ul>
 
     <ul id="secondList">
-      <li>Primo</li>
+      <li>Primo2</li>
       <li>Secondo</li>
       <li>Terzo</li>
     </ul>
@@ -48,6 +48,9 @@
     </h2>
   </div>
   <script>
+    // li ho provati tutti, poi però ho rimosso il comando
+
+
     /* ESERCIZIO 1
      Scrivi una funzione per cambiare il titolo del documento in qualcos'altro.
     */
@@ -55,7 +58,7 @@
     const changeTitle = function (newTitle) {
       document.querySelector('h1').innerText = newTitle
     }
-
+    //changeTitle('helloooo')
 
     /* ESERCIZIO 2
      Scrivi una funzione per cambiare la classe del titolo della pagina in "myHeading".
@@ -64,7 +67,7 @@
     const addClassToTitle = function () {
       document.querySelector('h1').className = 'myHeading'
     }
-
+  // addClassToTitle()
 
     /* ESERCIZIO 3
      Scrivi una funzione per cambiare il contenuto di tutti i p che sono discendenti di un div.
@@ -77,7 +80,7 @@
         paragraphs[i].innerText = 'nuovo testo!'
       }
     }
-
+    //changePcontent()
 
     /* ESERCIZIO 4
      Scrivi una funzione per cambiare la proprietà href di ogni link a https://www.google.com
@@ -86,7 +89,7 @@
     const changeUrls = function () {
       document.querySelector('a').href = 'https://www.google.com'
     }
-
+    //changeUrls()
 
     /* ESERCIZIO 5
      Scrivi una funzione per aggiungere un nuovo elemento alla seconda lista non-ordinata.
@@ -96,10 +99,10 @@
       let newLi = document.createElement('li')
       let list = document.querySelector('#secondList')
       list.appendChild(newLi)
-      newLi.innerText = 'NUOVO LI'
+      newLi.innerText = content
 
     }
-
+    //addToTheSecond('ciaooooooo')
 
     /* ESERCIZIO 6
      Scrivi una funzione per aggiungere un secondo paragrafo al primo div.
@@ -109,9 +112,9 @@
       let myDiv = document.querySelector('div div')
       let newP = document.createElement('p')
       myDiv.appendChild(newP)
-      newP.innerText = 'NUOVO PARAGRAFO'
+      newP.innerText = content
     }
-
+    //addParagraph('paragrafo nuovo')
 
     /* ESERCIZIO 7
      Scrivi una funzione per far scomparire la prima lista non-ordinata.
@@ -120,7 +123,7 @@
     const firstUlDisappear = function () {
       document.querySelector('#firstList').style.display = 'none'
     }
-
+    //firstUlDisappear()
 
     /* ESERCIZIO 8
      Scrivi una funzione per rendere verde lo sfondo di ogni lista non-ordinata.
@@ -132,7 +135,7 @@
         greenUl[i].style.backgroundColor = 'green'
       }
     }
-
+    //paintItGreen()
 
     /* ESERCIZIO 9
      Rendi il tag h1 capace di cambiare colore del testo ogni volta che l'utente ci clicca sopra.
@@ -144,7 +147,7 @@
         clickH1.style.color = color
       })
     }
-   
+    //makeItClickable('yellow')
 
 
     /* ESERCIZIO 10
@@ -157,7 +160,7 @@
         changeTxt.textContent = 'testo di prova'
       })
     }
-    
+    //changeFooterText()
 
     /* ESERCIZIO 11
      Aggiungi un event listener al campo di testo nella pagina e fai in modo che dopo ogni lettera il suo valore venga mostrato in console.
@@ -167,7 +170,7 @@
     inputField.addEventListener('keyup',function(){
       console.log(inputField.value)
     })
-
+    
     /* ESERCIZIO 12
      Crea un messaggio di benvenuto con un alert quando la pagina ha finito di caricarsi.
     */
