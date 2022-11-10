@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:not([type="submit"]) {
+            border: 1px solid black;
+            padding: 15px;
+            width: 40%;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 30px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myForm">
+
+        <div>
+            <input type="text" id="nome" placeholder="nome"><span></span>
+        </div>
+        <div>
+            <input type="text" id="cognome" placeholder="cognome"><span></span>
+        </div>
+        <div>
+            <input type="email" id="email" placeholder="email"><span></span>
+        </div>
+        <div>
+            <input type="password" id="password" placeholder="password"><span></span>
+        </div>
+        <button type="button" id="mostra-nascondi">Mostra/nascondi</button>
+        <input type="submit" value="invia" id="invia">
+    </form>
+
+
+
+    <script>
+
+        let mostraNascondi = document.querySelector('#mostra-nascondi')
+
+        mostraNascondi.addEventListener('click', function () {
+            let password = document.querySelector('#password')
+            password.type = password.type == 'text' ? 'password' : 'text'
+        })
+
+        let formBtn = document.querySelector('#invia')
+
+        formBtn.addEventListener('submit', function (e) {
+            e.preventDefault()//blocco l'invio del form
+
+            let nome = document.querySelector('#nome')
+
+            let cognome = document.querySelector('#cognome')
+
+            let email = document.querySelector('#email')
+
+            let password = document.querySelector('#password')
+
+            let valid = true
+
+            console.log(nome.checkValidity(), nome.validationMessage, nome.validity)
+            console.log(cognome.checkValidity(), cognome.validationMessage, cognome.validity)
+            console.log(email.checkValidity(), email.validationMessage, email.validity)
+            console.log(password.checkValidity(), password.validationMessage, password.validity)
+            if(valid){
+                console.log('form inviato')
+            }
+
+
+            
+
+        })
+
+
+    </script>
+</body>
+
+</html>

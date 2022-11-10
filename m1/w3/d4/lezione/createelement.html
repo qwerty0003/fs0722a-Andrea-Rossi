@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="target"></div>
+    <button id="elimina">Elimina</button>
+    <div id="box">testo del div<span> Testo dello span</span></div>
+
+
+    <script>
+
+        let target = document.getElementById('target')
+
+        let div = document.createElement('div')
+        let divText = document.createTextNode('Elemento creato da js')
+        //oppure div.textContent = 'Prova' e poi senza div append
+
+        div.append(divText)
+
+        target.append(div)
+        
+        //eliminazione elemento
+        let elimina = document.querySelector('#elimina')
+        elimina.addEventListener('click', () => div.remove())
+        
+        //navigare tra node e textnode per recuperare il contenuto
+
+        let box = document.getElementById('box')
+
+        console.log(box.innerHTML)//prelevo tutto l'html dentro l'oggetto
+
+        console.log(box.innerText)//prelevo il testo dei div e dei figli in un unica stringa
+
+        console.log(box.textContent)//prelevo il testo dei div e dei figli in un unica stringa
+
+        console.log(box.childNodes[0].textContent)//prelevo solo il testo contenuto nel parent
+
+        console.log(box.childNodes[1].firstChild.textContent)//prelevo solo il testo contenuto nel child
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button id="elimina">Elimina</button>
+    <button id="crea">Crea</button>
+    <div id="target"></div>
+    <div id="box">testo del div<span> Testo dello span</span></div>
+
+
+    <script>
+
+        let crea = document.querySelector('#crea')
+        crea.addEventListener('click', () => {
+
+            let target = document.getElementById('#target')
+
+            let div = document.createElement('div')
+            let divText = document.createTextNode('Elemento creato da js')
+
+            div.addEventListener('click',()=>{
+                div.remove()
+            })
+
+            div.append(divText)
+            target.append(div)
+        })
+
+        
+        
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:not([type="submit"]) {
+            border: 1px solid black;
+            padding: 15px;
+            width: 40%;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 30px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myForm">
+
+        <div>
+            <input type="text" id="nome" class="notEmpty" placeholder="nome" data-notEmpty="Ti sei dimenticato il nome">
+        </div>
+        <div>
+            <input type="text" id="cognome" class="notEmpty" placeholder="cognome" data-notEmpty="Manca il cognome">
+        </div>
+        <div>
+            <input type="email" id="email" class="notEmpty" placeholder="email" data-notEmpty="l'email è mancante">
+        </div>
+        <div>
+            <input type="password" id="password" class="notEmpty" placeholder="password"
+                data-notEmpty="password obbligatoria">
+        </div>
+        <button type="button" id="mostra-nascondi">Mostra/nascondi</button>
+        <input type="submit" value="invia" id="invia">
+    </form>
+
+
+
+    <script>
+
+        let mostraNascondi = document.querySelector('#mostra-nascondi')
+
+        mostraNascondi.addEventListener('click', function () {
+            let password = document.querySelector('#password')
+            password.type = password.type == 'text' ? 'password' : 'text'
+        })
+
+        let formBtn = document.querySelector('#invia')
+
+        formBtn.addEventListener('submit', function (e) {
+            e.preventDefault()//blocco l'invio del form
+
+            let campi = document.querySelector('#myForm .notEmpty')
+
+            function validateNotEmpty(field, message) {
+                if (!document.querySelector(`#${campo.id}-validation`)) {
+                    let span = document.createElement('span')
+                    span.id = `#${field.id}-validation`
+                    field.after(span)
+                }
+                if (!field.value) {
+                    let message = field.getAttribute('data-notempty')
+                    span.textContent = message
+                } else {
+                    span.textContent = ''
+                }
+            }
+
+            for (let campo of campi) {
+                validateNotEmpty(campo, campo.id + ' mancante')
+            }
+
+
+
+
+            let valid = true
+
+        })
+
+
+    </script>
+</body>
+
+</html>
