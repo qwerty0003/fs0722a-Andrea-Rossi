@@ -7,6 +7,20 @@ REGOLE
 - Per farlo puoi utilizzare il terminale Bash, quello di VSCode o quello del tuo sistema operativo (se utilizzi macOS o Linux)
 */
 
+  // ATTENZIONE! alcune funzioni non hanno la riga per farle partire, tutti gli esercizi sono stati testati e sono funzionanti. Se manca l'avvio della funzione è per dimenticanza o per conntrasti
+
+
+
+
+
+
+
+
+
+
+
+
+
 // JS Basics
 
 /* ESERCIZIO A
@@ -292,7 +306,7 @@ const whatDayIsIt = function () {
       break
   }
 }
-whatDayIsIt()
+//whatDayIsIt()
 console.log('============')
 
 
@@ -319,7 +333,7 @@ function dateF(str) { //funzione per trasformare le date in numeri calcolabili
   var mod = str.split('/');
   return new Date(mod[2], mod[0] - 1, mod[1]);
 }
-howManyDays(dateF('23/12/2012'), dateF('16/11/2015'))
+//howManyDays(dateF('23/12/2012'), dateF('16/11/2015'))
 
 
 /* ESERCIZIO 10
@@ -330,16 +344,16 @@ const isTodayMyBirthday = (date) => {
   let giorno = data.getDate()
   let mese = data.getMonth()
   let oggi = `${giorno}/${mese + 1}`
-  console.log(oggi)
   if (oggi === date) {
     return console.log(true)
   } else {
     return console.log(false)
   }
 }
+
 //ho creato una new date in cui ho inserito il giorno ed il mese+1(perchè i mesi partono da 0) e ho messo un console log di oggi
-isTodayMyBirthday('10/11')
-isTodayMyBirthday('16/11')
+//isTodayMyBirthday('11/11')
+//isTodayMyBirthday('16/11')
 
 console.log('================')
 // Arrays & Oggetti
@@ -365,7 +379,7 @@ const countMovies = (obj) => {
   let lenght = obj.length
   return console.log(lenght)
 } //misuro la lunghezza dell'oggetto, la funzione va avviata alla fine dopo aver creato movies
-
+//countMovies(movies)
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
@@ -374,6 +388,9 @@ const onlyTheYears = () => {
   return console.table(newArr)
 }// ho usato map per creare un nuovo array con solo gli anni
 
+//onlyTheYears()
+
+
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
@@ -381,11 +398,11 @@ const onlyInLastMillennium = () => { //creo un ciclo che controlla tutti gli ann
   for (var i = 0; i < movies.length; i++) {
     if (movies[i].Year <= "2000") {
       let anno = movies[i].Title + ' ' + movies[i].Year
-      console.log(anno)
+      console.log(anno) //ho voluto stampato titolo e anno, saranno 4 console log diversi
     }
   }
 }
-onlyInLastMillennium()
+//onlyInLastMillennium()
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
@@ -396,7 +413,7 @@ onlyInLastMillennium()
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
-const searchByTitle = (srt) => {
+/*const searchByTitle = (srt) => {
   for (var i = 0; i < movies.length; i++) {
     for (Title in movies[i]) {
       if (movies[i][Title].indexOf(srt) != -1) {
@@ -404,7 +421,7 @@ const searchByTitle = (srt) => {
       }
     }
   }
-}
+}*/ //non sono sicuro di questa
 
 
 /* ESERCIZIO 18
@@ -415,6 +432,22 @@ const searchByTitle = (srt) => {
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+
+/**  ho dato un nome alla mia variabile e con il metodo findindex
+ * unito a spilce ho eliminato l'elemento n
+ * console table prima e dopo per farti vedere la differenza
+               */
+
+
+
+//console.table(movies)
+const removeIndex = (n) => {
+  let itemToBeRemoved = movies[n]
+  movies.splice(movies.findIndex(a => a.id === itemToBeRemoved.id), 1)
+  return console.table(movies)
+}
+//removeIndex(0)
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -518,7 +551,7 @@ const halfTree = (n) => {
   *****
 
 */
-const tree = (n) => {
+const tree = (n) => { 
   var txt = "";
   for (i = 1; i <= n; i++) {
     txt = "";
@@ -531,11 +564,30 @@ const tree = (n) => {
     console.log(txt);
   }
 }
-tree(5)
+//tree(5) //alberello in console
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+function isItPrime(n) {
+  if (n === 1) {
+    return false;
+  }
+  else if (n === 2) {
+    return true;
+  } else {
+    for (var x = 2; x < n; x++) {
+      if (n % x === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
 
-
+/*console.log(isItPrime(37));
+console.log(isItPrime(1));
+console.log(isItPrime(2));
+console.log(isItPrime(3));
+console.log(isItPrime(12));*/
 
