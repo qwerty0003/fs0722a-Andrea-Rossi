@@ -175,9 +175,12 @@ header{
 }
 #question{
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
   text-align: center;
+}
+#question h1{
+  width: 60%;
 }
 
 #footP2{

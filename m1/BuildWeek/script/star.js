@@ -6,3 +6,4 @@ starEls.forEach(star => {
     starEl.parentNode.setAttribute('data-stars', starEl.dataset.rating);
   });
 })
+//script stelle

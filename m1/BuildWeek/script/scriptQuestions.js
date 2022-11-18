@@ -328,7 +328,7 @@ function salva()
 
 //Setto musica di sottofondo
 var myMusic = document.querySelector("#music");
-	myMusic.volume = 0.2;
+	myMusic.volume = 0.3;
 
   
 
