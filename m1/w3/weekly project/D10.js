@@ -7,7 +7,7 @@ REGOLE
 - Per farlo puoi utilizzare il terminale Bash, quello di VSCode o quello del tuo sistema operativo (se utilizzi macOS o Linux)
 */
 
-  // ATTENZIONE! alcune funzioni non hanno la riga per farle partire, tutti gli esercizi sono stati testati e sono funzionanti. Se manca l'avvio della funzione è per dimenticanza o per conntrasti
+// ATTENZIONE! alcune funzioni non hanno la riga per farle partire, tutti gli esercizi sono stati testati e sono funzionanti. Se manca l'avvio della funzione è per dimenticanza o per conntrasti
 
 
 
@@ -551,7 +551,7 @@ const halfTree = (n) => {
   *****
 
 */
-const tree = (n) => { 
+const tree = (n) => {
   var txt = "";
   for (i = 1; i <= n; i++) {
     txt = "";

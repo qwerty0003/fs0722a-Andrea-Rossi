@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz Game</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img id="log" src="assets/logo.png" alt="logo">
+        </div>
+    </header>
+    <main>
+        <h1>Welcome to<br> <b>your exam</b> </h1>
+        <h3>Instructions</h3>
+        <p class="testi">
+            We dont expect most engineers to know the answers to all of
+            these <br> questions so don't worry if you are unsure of a few of them.
+        </p>
+        <div class="testi">
+            <ul>
+                <li>Each question is <b>timed</b>  and can only be <b>answered once.</b> </li>
+                <li>Changing browser tab or opening other windows will <b>invalidate the question.</b> </li>
+                <li>This exam will take approx. <b>0-5 minutes.</b> </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <span id="c">
+            <input type="checkbox"  id="check" >
+            <span id="descrizione" class="testi">I promise to answer myself without help from anyone</span>
+        </span >
+        <span>
+            <form action="/action_page.php">
+                <label for="difficult" class="testi">Choose difficult :</label>
+                <select name="difficult" id="difficult">
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </form>
+        </span>
+        <span id="ref">
+            <a href="questions.html"><button>PROCEED</button></a>
+        </span>
+    </footer>
+    <script src="script/scriptIndex.js">
+        
+    </script>
+</body>
+</html>

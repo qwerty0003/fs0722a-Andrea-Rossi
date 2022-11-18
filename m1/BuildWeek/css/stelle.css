@@ -1,0 +1,120 @@
+body
+{
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    text-align: center;
+    
+}
+#topbar
+{
+    text-align: left;
+    width: 50%;
+}
+img
+{
+    width: 20%;
+    margin-left: 77px;
+    margin-top: 15px;
+}
+#titolo
+{
+    color: #fff;
+    font-family: "Outfit";
+}
+#titolo h1
+{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+#titolo h3
+{
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+.paragr{
+    color: #fff;
+    font-size: 1.2rem;
+}
+input
+{
+    color: #fff;
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 3px solid #900080;
+    width: 38rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+footer button{
+    border: 0px;
+    filter : brightness(150%);
+  
+    color: rgb(0, 0, 0);
+    background-color: #00ffff;
+    width: 250px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 50px #00ffff;
+  }
+  button:hover{
+      opacity: 60%;
+      cursor:grab;
+      box-shadow: 0 0 50px #00ffff;
+  }
+
+.stars {
+    cursor: pointer;
+   
+}
+.stars:hover .star path {
+    fill: #00ffff ;
+}
+.stars .star path {
+    fill: blue;
+}
+.stars .star:hover ~ .star path {
+    fill: transparent;
+    stroke: #00ffff;
+}
+.stars[data-stars] .star path {
+    fill: #00ffff;
+}
+.stars[data-stars="1"] .star:nth-child(1) ~ .star path {
+    fill: transparent;
+    stroke: #00ffff;
+}
+.stars[data-stars="2"] .star:nth-child(2) ~ .star path {
+     fill: transparent;
+    stroke: #00ffff;
+}
+.stars[data-stars="3"] .star:nth-child(3) ~ .star path {
+    fill: transparent;
+    stroke: #00ffff;
+}
+.stars[data-stars="4"] .star:nth-child(4) ~ .star path {
+      fill: transparent;
+    stroke: #00ffff;
+}
+.stars[data-stars="5"] .star:nth-child(5) ~ .star path {
+      fill: transparent;
+    stroke: #00ffff;
+}
+.stars[data-stars="6"] .star:nth-child(6) ~ .star path {
+    fill: transparent;
+  stroke: #00ffff;
+}.stars[data-stars="7"] .star:nth-child(7) ~ .star path {
+    fill: transparent;
+  stroke: #00ffff;
+}.stars[data-stars="8"] .star:nth-child(8) ~ .star path {
+    fill: transparent;
+  stroke: #00ffff;
+}.stars[data-stars="9"] .star:nth-child(9) ~ .star path {
+    fill: transparent;
+  stroke: #00ffff;
+}.stars[data-stars="10"] .star:nth-child(10) ~ .star path {
+    fill: transparent;
+  stroke: #00ffff;
+}
+   

@@ -1,0 +1,19 @@
+HTML
+	<audio id="music" controls controlslist="play nodownload" autoplay>
+        	<source src="assets/dbTheme.mp3" type="audio/mp3">
+    	</audio>
+
+
+CSS
+	#music{
+  		
+	}
+
+
+JAVASCRIPT
+	var myMusic = document.querySelector("#music");
+	myMusic.volume = 0.03
+
+
+SE PARTO DA INDEX E VAI SU QUESTIONS ALLORA LA MUSICA VA
+SE CARICO DIRETTAMENTE QUESTIONS ALLORA LA MUSICA NON VA
