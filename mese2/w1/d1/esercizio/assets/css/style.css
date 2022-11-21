@@ -264,19 +264,17 @@ footer a {
     header {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
     }
 
     header p {
         margin-bottom: 0px;
+        margin-right: 40%;
     }
 
     header div img {
         margin-bottom: 0px;
-    }
-
-    nav {
-        margin-left: 40%;
     }
 
     table {
@@ -292,6 +290,9 @@ footer a {
         width: 50%;
         height: 200px;
     }
+    input {
+        width: 80%;
+    }
 
     #videoForm {
         display: flex;
@@ -306,7 +307,5 @@ footer a {
         width: 30%;
     }
 
-    input {
-        width: 80%;
-    }
+   
 }
