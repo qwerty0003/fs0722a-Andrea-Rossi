@@ -289,7 +289,9 @@ footer a {
     article section {
         width: 50%;
         height: 200px;
+        border-radius: 20px;
     }
+
     input {
         width: 80%;
     }
@@ -307,5 +309,4 @@ footer a {
         width: 33.333%;
     }
 
-   
 }
