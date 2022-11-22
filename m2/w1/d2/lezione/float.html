@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        header {
+            background-color: navy;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        nav {
+            background-color: blueviolet;
+            height: 30px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        nav li {
+            float: left;
+            border-right: 1px solid #fff;
+            padding: 0 90px;
+        }
+
+        /*float rompe la caratteristica di display block e fa fluttuare gli elementi a sinistra e a destra
+        
+        i tag a cui assegnamo float non contribuiscono all'altezza del contenitore!!*/
+
+        nav li:last-child {
+            border-right: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            line-height: 30px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: blueviolet;
+        }
+
+        aside {
+            float: left;
+            width: 300px;
+        }
+
+        #right {
+            float: right;
+            width: 300px;
+        }
+
+        /*gli elementi che hanno float vanno sempre prima di quelli liberi*/
+
+
+        .even {
+            float: right;
+            width: 100px;
+        }
+
+        .odd {
+            float: left;
+            width: 100px;
+        }
+
+
+        footer {
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            clear: both;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!--INTESTAZIONE-->
+        <header>
+            <h1>Epicode</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">Css</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Typescript</a></li>
+                    <li><a href="#">Angular</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--CORPO CENTRALE-->
+        <main>
+            <aside>
+                <img src="images/newyork-1.jpg" alt="">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+            </aside>
+            <aside id="right">
+                <img src="images/newyork-1.jpg" alt="">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+            </aside>
+            <section>
+                <article>
+                    <img src="images/ananas-1.jpg" alt="" class="odd">
+                    <p>Marzipan chocolate cake bonbon wafer chupa chups carrot cake. Pudding I love apple pie gummies
+                        pastry gummi bears topping. Caramels jelly I love gummies cheesecake ice cream bonbon. Danish
+                        jelly beans soufflé topping topping liquorice toffee. Caramels icing lemon drops shortbread
+                        toffee I love muffin ice cream sugar plum. I love donut pastry candy canes halvah gingerbread.
+                        Cheesecake cake chupa chups soufflé I love I love I love gummies. Gummi bears lollipop lollipop
+                        I love cupcake liquorice caramels candy canes. Dragée I love gummies topping sweet roll
+                        gingerbread marzipan. Donut carrot cake shortbread pudding I love pastry dragée tootsie roll
+                        topping. Soufflé tiramisu sweet tart halvah cupcake. Tootsie roll lollipop jujubes powder pastry
+                        wafer.</p>
+                </article>
+                <article>
+                    <img src="images/ananas-1.jpg" alt="" class="even">
+                    <p>Lemon drops pastry apple pie soufflé tiramisu toffee chupa chups. Candy icing I love cupcake
+                        lemon drops. Pie gummies oat cake donut chocolate. Lollipop ice cream candy canes cookie pastry
+                        pudding marzipan. Halvah pastry cotton candy dragée I love donut cotton candy pudding.
+                        Shortbread I love chocolate cake shortbread apple pie chocolate sweet roll. Donut bear claw
+                        chocolate cake sugar plum sweet I love cheesecake gingerbread. Candy canes carrot cake brownie
+                        danish cupcake. Cookie croissant powder topping I love. Cheesecake jelly dessert wafer muffin
+                        lemon drops cheesecake. Cheesecake liquorice croissant lemon drops carrot cake danish jelly-o.
+                        Danish lollipop cotton candy candy canes muffin I love biscuit topping. Pastry I love sweet roll
+                        cupcake pie lollipop gummies jelly beans topping. Jelly-o jelly beans brownie carrot cake wafer
+                        wafer muffin lemon drops icing.</p>
+                </article>
+                <article>
+                    <img src="images/ananas-1.jpg" alt="" class="odd">
+                    <p>I love bear claw oat cake I love carrot cake shortbread candy canes wafer. Soufflé icing pastry I
+                        love dessert cupcake. Bonbon caramels lemon drops topping chupa chups toffee. Powder sesame
+                        snaps cheesecake gummi bears sweet dragée powder. Ice cream chocolate sweet roll croissant
+                        dessert halvah chocolate cake jujubes. Bonbon fruitcake I love chocolate cake dragée cookie
+                        fruitcake. I love macaroon wafer sesame snaps toffee toffee I love. Halvah jujubes donut I love
+                        dragée tart muffin. Jelly sesame snaps apple pie chupa chups marzipan bonbon tart. Icing sugar
+                        plum apple pie cake chocolate cake sweet roll. Fruitcake sweet biscuit apple pie cake. Tart
+                        gummies jujubes croissant cotton candy gummies lollipop marshmallow lollipop. I love I love I
+                        love danish carrot cake cupcake jujubes candy canes. Candy I love bear claw tiramisu I love
+                        biscuit pie marzipan.</p>
+                </article>
+                <article>
+                    <img src="images/ananas-1.jpg" alt="" class="even">
+                    <p>Jelly beans marshmallow muffin tiramisu halvah I love ice cream cake. Sugar plum carrot cake pie
+                        tiramisu fruitcake chocolate cake tart. Donut marshmallow I love muffin I love. Bonbon halvah
+                        biscuit gummi bears gummies sweet cheesecake chocolate. Jelly oat cake oat cake muffin oat cake
+                        jujubes croissant pie. Cookie carrot cake marshmallow shortbread toffee candy canes I love cake.
+                        Jelly-o bonbon icing tootsie roll pudding sweet croissant sweet roll. Tiramisu I love cotton
+                        candy tart carrot cake wafer pie sesame snaps fruitcake. Dragée bear claw lemon drops jujubes
+                        gingerbread donut cupcake I love I love. Oat cake danish gingerbread I love donut muffin candy
+                        canes chocolate bar lemon drops. Chocolate cake marshmallow pastry muffin tart candy canes
+                        biscuit I love lollipop. Cookie topping croissant chocolate cake gingerbread. Carrot cake I love
+                        dragée candy cheesecake marzipan pudding ice cream cheesecake.</p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p>FOOOOOOOOOOOOOOTER</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
