@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     background-color: #fbf7e3;
     display: flex;
@@ -139,10 +144,8 @@ h3 {
 
 /***************MEDIA QUERY TABLET*****************/
 @media screen and (min-width:576px) {
-    body{
-        margin: 0;
-        padding: 0;
-    }
+
+    /*topbar*/
     nav {
         display: flex;
         flex-wrap: nowrap;
@@ -160,7 +163,7 @@ h3 {
         padding: 10px;
         color: #5f230a;
         font-weight: 600;
-        width:fit-content;
+        width: fit-content;
         font-size: 0.8rem;
     }
 
@@ -168,8 +171,8 @@ h3 {
         flex: 0 0 26%;
         order: 3;
         font-size: 1.3em;
-        padding-top: 20px ;
-        padding-bottom:20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         margin-top: 10px;
     }
 
@@ -198,6 +201,7 @@ h3 {
         padding-right: 0.3em;
     }
 
+    /*etichette*/
     h2 {
         color: #5f230a;
         text-align: left;
@@ -205,17 +209,21 @@ h3 {
         font-weight: bold;
         margin: 1em 0 0 0.5em;
     }
-    h2 br{
+
+    h2 br {
         display: none;
     }
-    #byebye{
+
+    #byebye {
         display: none;
     }
-    main{
+
+    main {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -224,20 +232,21 @@ h3 {
         border-radius: 30px;
         margin: 30px 20px;
         box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
-        width: 40%;
+        width: 44%;
     }
-    
+
+    /*article*/
     .chart {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
-    
+
     .container img {
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
         width: 100%;
         margin: auto;
     }
-   
+
 }
