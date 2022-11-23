@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container {
+            /*esistono inline-greed e subgrid*/
+            border: 3px solid red;
+            display: grid;
+            /* grid-template-columns: 10% 15% auto 15% 10%;
+            grid-template-rows:25% 10% auto; */
+            grid-template-columns: [inizioCol] 10% [col2] 15% [col3] auto [col4] 15% [col5] 10% [fineCol];
+            grid-template-rows: [inizioRiga] 25% [riga1fine riga2inizio] 25% [riga2fine] auto [fineTutto];
+            margin-bottom: 10px;
+        }
+
+        div {
+            border: 1.5px solid blue;
+            padding: 0.5em;
+        }
+
+        .container2 {
+            border: 3px solid red;
+            display: grid;
+            grid-template-columns: 15% repeat(3, 25%[colStart]) 10%;
+            grid-template-rows: [inizioRiga] 25% [riga1fine riga2inizio] 25% [riga2fine] auto [fineTutto];
+            margin-bottom: 10px;
+        }
+
+        #principe>div {
+            border: 2px dashed black;
+            background-color: lightcoral;
+            margin: 3px;
+            text-align: center;
+        }
+
+        #principe {
+            height: 400px;
+            border: 3px dotted darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+
+    </div>
+
+    <div class="container2">
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+
+    </div>
+
+
+    <div id="principe" style='
+    display: grid; 
+    grid-template-columns: 20% 15% auto 25%;
+    grid-template-rows: 10% auto 15%; 
+    grid-template-areas: 
+    "header header header header"
+    "sidebar . main main"
+    "footer footer footer footer"
+    '>
+        
+        <div style='grid-area: header;'>HEADER</div>
+        <div style='grid-area: main;'>MAIN</div>
+        <div style='grid-area: sidebar;'>SIDEBAR</div>
+        <div style='grid-area: footer;'>FOOTER</div>
+
+    </div>
+</body>
+
+</html>
