@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carteAnimate</title>
+    <style>
+
+        #container{
+            width: 760px;
+            margin: 0 auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            font-size: 14px;
+            padding-top:50px ;
+        }
+
+        #cards{
+            margin: 0;
+            padding: 0;
+        }
+
+        #cards li{
+            background-color: #333;
+            margin: 0;
+            color: #fff;
+            height: 470px;
+            width: 200px;
+            font-size: 12px;
+            display: block;
+            float: left;
+            border: 1px solid #666;
+            padding: 10px;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #000;
+            text-shadow: 1px 1px 1px #000;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #card1{
+            transform: rotate(-20deg);
+            z-index: 1;
+            left: 150px;
+            top: 40px;
+        }
+
+        #card2{
+            z-index: 2;
+            top: 10px;
+            left: 70px;
+        }
+
+        #card3{
+            transform: rotate(20deg);
+            z-index: 3;
+            top: 50px;
+            right: 10px;
+        }
+
+        #cards li:hover{
+            z-index: 4;
+            background-color: #f90;
+            color: #333;
+            text-shadow: 1px 1px 1px #fff;
+        }
+
+        #card1:hover{
+            transform: scale(1.1) rotate(-18deg);
+        }
+        #card2:hover{
+            transform: scale(1.1) rotate(-2deg);
+        }
+        #card3:hover{
+            transform: scale(1.1) rotate(18deg);
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    <ul id="cards">
+        <li id="card1">
+            <h2>Card 1</h2>
+            <p>Cupcake ipsum dolor sit amet jujubes carrot cake dessert. Sweet I love sweet roll jelly beans pie. Donut
+                soufflé gummies icing topping sweet roll oat cake. Tootsie roll macaroon pastry bear claw dessert carrot
+                cake sweet roll. Danish lemon drops donut pie cheesecake topping jelly-o. Croissant sweet tootsie roll
+                dragée sweet roll. Lemon drops muffin oat cake biscuit jujubes. Biscuit pudding marshmallow gingerbread
+                wafer. Cake sweet oat cake caramels toffee sweet roll jelly beans marshmallow. Dessert apple pie danish
+                powder danish. Soufflé topping biscuit chocolate cake cupcake sugar plum apple pie icing. Powder biscuit
+                marzipan pastry oat cake sesame snaps cake marshmallow. Sweet fruitcake pudding candy canes I love
+                marzipan cupcake. Pastry sweet roll jelly beans donut danish I love.</p>
+        </li>
+
+        <li id="card2">
+            <h2>Card 2</h2>
+            <p>Jelly beans tiramisu carrot cake sugar plum cake. Chupa chups tootsie roll sweet tootsie roll jelly-o
+                muffin chocolate cake. Cupcake cotton candy caramels icing candy. Powder croissant brownie donut toffee
+                cotton candy shortbread chocolate cake. Shortbread chocolate bar chocolate dessert tootsie roll. Jujubes
+                icing tart cake cake toffee I love sugar plum. Biscuit I love dragée chocolate cake chocolate biscuit
+                sweet candy canes oat cake. Topping gummi bears powder tootsie roll sesame snaps brownie I love halvah I
+                love. I love sesame snaps I love chupa chups sesame snaps halvah. Dessert dessert chocolate apple pie
+                caramels jelly beans cookie. Liquorice caramels sugar plum soufflé cake. Tiramisu marshmallow bear claw
+                topping cookie. Muffin chupa chups sesame snaps sweet gummies wafer jelly-o marzipan. Jelly I love
+                cookie bear claw chocolate dragée.</p>
+        </li>
+
+        <li id="card3">
+            <h2>Card 3</h2>
+            <p>Cake I love sesame snaps bear claw tart toffee toffee cotton candy. Danish sugar plum toffee cookie
+                chocolate cake macaroon. Jelly I love macaroon candy canes jelly beans. Croissant tiramisu chocolate I
+                love candy lemon drops. Jelly bear claw apple pie sweet marshmallow soufflé powder. Topping cotton candy
+                danish jelly candy canes macaroon pudding. Macaroon chocolate bar liquorice toffee chocolate. Cheesecake
+                wafer I love sesame snaps candy canes sweet roll sweet. Powder apple pie candy caramels icing powder
+                jelly. Wafer sweet roll pastry cotton candy fruitcake. Wafer marshmallow I love liquorice ice cream I
+                love cheesecake jelly-o chocolate cake. I love apple pie halvah gummies brownie I love jelly. I love
+                brownie cupcake pudding apple pie sweet roll. Pastry sugar plum cake sugar plum croissant halvah powder
+                oat cake candy.</p>
+        </li>
+    </ul></div>
+
+</body>
+
+</html>

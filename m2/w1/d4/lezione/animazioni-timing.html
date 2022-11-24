@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animazioni timing</title>
+    <style>
+
+        #box{
+            width: 520px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid;
+        }
+
+        #box1{
+            border-color: darkgoldenrod;
+            animation-name: boxAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+
+        #box2{
+            border-color: orangered;
+            animation-name: boxAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+        }
+
+        #box3{
+            border-color: green;
+            animation-name: boxAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
+
+        #box4{
+            border-color: blue;
+            animation-name: boxAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        #box5{
+            border-color: palevioletred;
+            animation-name: boxAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+
+        @-webkit-keyframes boxAnimation{
+            0%{transform: translate(0,0);}
+            100%{
+                transform: translate(400px,0)
+                rotate(90deg);
+                border-radius: 50px;
+            }
+        }
+        @keyframes boxAnimation{
+            0%{transform: translate(0,0);}
+            100%{
+                transform: translate(400px,0)
+                rotate(90deg);
+                border-radius: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="box">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+        <div id="box5" class="box"></div>
+    </div>
+
+</body>
+</html>

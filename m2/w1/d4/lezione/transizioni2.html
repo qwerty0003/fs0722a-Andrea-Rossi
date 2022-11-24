@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            transition-property: width;
+            transition-duration: 6s;
+            transition-timing-function: linear;
+            transition-delay:1s;        
+        }
+        /*transition: width 6s linear 1s; -> : property duration timing-function delay; scritto così è la stessa cosa di sopra ma in una riga, ATTENZIONE ALL'ORDINE */
+        
+        div:hover{
+            width: 666px;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <h2>Specifico le propietà della <code>transition</code> una ad una.</h2>
+    <p>Allo stato <code>hover</code> si attivano i diversi effetti della transizione.</p>
+    <div></div>
+
+</body>
+</html>

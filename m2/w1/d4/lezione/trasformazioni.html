@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trasformazioni</title>
+    <style>
+
+        div.a{
+            width: 150px;
+            height: 80px;
+            background-color: yellow;
+            transform: rotate(39deg);
+            opacity: 0.3;
+        }
+        
+        div.b{
+            width: 150px;
+            height: 80px;
+            background-color: mediumaquamarine;
+            transform: skew(-24deg, -28deg);
+            margin-bottom: 2em; 
+        }
+
+        div.c{
+            width: 150px;
+            height: 80px;
+            background-color: yellowgreen;
+            transform: scale(0.5,1.1);
+        }
+        
+        #box{
+            width: 150px;
+            height: 150px;
+            background-color: tomato;
+            margin: 100px;
+            transform: rotate(148deg) scale(1.5) skew(0deg,-20deg);
+            opacity: 0.6;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    
+    <h2>La propietà <code>transform</code> </h2>
+    <p><code>transform rotate</code></p>
+    <div class="a">ROTATE</div>
+    <p>Rotate ruota tutto il contenitore</p>
+    <p><code>transform skew</code></p>
+    <div class="b">SKEW</div>
+    <p>Skew rende storto il mio contenitore, , su asse x skewX(), su asse y skewY() o entrambi skew()</p>
+    <p><code>transform scale</code></p>
+    <div class="c">SCALE</div>
+    <p>Scale ingrandisce o diminuisce in scala il mio contenitore, stessi principi sugli assi di skew</p>
+
+    <h2>Trasformazioni in contemporanea</h2>
+    <div id="box">MISTO</div>
+
+
+</body>
+</html>

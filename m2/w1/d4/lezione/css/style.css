@@ -1,0 +1,109 @@
+#contenitore {
+    width: 960px;
+    height: 600px;
+    border: 1px solid #000;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+}
+
+#sx {
+    width: 178px;
+    height: 600px;
+    background-color: #D0F3FB;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+}
+
+#dx {
+    width: 178px;
+    height: 600px;
+    background-color: #D0F3FB;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+}
+
+#bottom {
+    width: 960px;
+    height: 98px;
+    background-color: #D0F3FB;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+}
+
+#top {
+    width: 960px;
+    height: 98px;
+    background-color: #D0F3FB;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+
+#vasca {
+    width: 600px;
+    height: 400px;
+    margin: 100px auto;
+    box-shadow: 5px 5px 5px 5px #666666;
+    border-radius: 5px;
+}
+
+#corallo {
+    position: absolute;
+    left: 450px;
+    z-index: 4;
+    top: 400px;
+}
+
+#pesce1 {
+    position: absolute;
+    left: 100px;
+    z-index: 5;
+    top: 300px;
+    animation: nuotare1 20s infinite linear forwards;
+}
+
+#pesce2 {
+    position: absolute;
+    right: 100px;
+    z-index: 3;
+    top: 200px;
+    animation: nuotare2 20s infinite linear forwards;
+}
+
+#pesce3 {
+    position: absolute;
+    left: 100px;
+    z-index: 5;
+    animation: nuotare3 20s infinite linear forwards;
+    top: 450px;
+}
+
+@-webkit-keyframes nuotare1 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(120px, -10px) rotate(5deg);
+    }
+
+    40% {
+        transform: translate(250px, 20px) scale(1, 1.6);
+    }
+
+    60% {
+        transform: translate(400px, 25px) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(575px, -5px) rotate(7deg) scale(1, 1.6);
+    }
+
+    to {
+        -webkit-transform: translate(770px, 0px);
+    }
+}
