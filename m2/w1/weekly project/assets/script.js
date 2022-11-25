@@ -1,22 +1,20 @@
 
-window.addEventListener("scroll", function(event){
-    
+window.addEventListener("scroll", function (event) {
+
     var top = this.scrollY;
 
-    let navbar=this.document.querySelector("header");
+    let navbar = this.document.querySelector("header");
 
-    let button=this.document.querySelector("#start");
-    
-    if(top>295)
-    { 
-        navbar.style.backgroundColor="#fff"
+    let button = this.document.querySelector("#start");
 
-        button.style.backgroundColor="#1a8917"
+    if (top > 295) {
+        navbar.style.backgroundColor = "#fff"
+
+        button.style.backgroundColor = "#1a8917"
     }
-    else
-    {
-        navbar.style.backgroundColor="#ffc017"
-        
-        button.style.backgroundColor="#191919"
+    else {
+        navbar.style.backgroundColor = "#ffc017"
+
+        button.style.backgroundColor = "#191919"
     }
 });
