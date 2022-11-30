@@ -1,0 +1,16 @@
+button{
+    border-radius:50px;
+    border: none;
+    color: $colore-primario;
+    background-color: lightcoral;
+    padding: 1em 2rem;
+    font-family: monospace;
+    font-size:2rem;
+    margin: 2rem auto;
+    display: grid;
+    transform: rotate(3deg);
+    &:hover{
+        background-color: coral;
+        transform: scale(1.3) rotate(-5deg);
+    }
+}

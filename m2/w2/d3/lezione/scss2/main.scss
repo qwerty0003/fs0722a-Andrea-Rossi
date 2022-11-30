@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'buttons';
+
+body{
+    width: $main-width;
+    color: $colore-primario;
+    background-color: $bg-body;
+}
+.container{
+    width: $main-width;
+    border: $border-base;
+}

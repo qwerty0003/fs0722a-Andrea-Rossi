@@ -1,0 +1,89 @@
+button {
+  margin: 1em;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  border: none;
+  font-family: monospace;
+}
+
+.btn1 {
+  background-color: #65C7F7;
+}
+.btn1:hover {
+  background-color: #243463;
+  transform: scale(1.2) rotate(-5deg);
+  color: #e6dddd;
+}
+
+.btn2 {
+  background-color: #243463;
+  color: #e6dddd;
+}
+.btn2:hover {
+  background-color: #65C7F7;
+  color: black;
+  transform: scale(1.2) rotate(5deg);
+}
+
+body {
+  background-image: url(../imgs/cool-background.png);
+  font-family: monospace;
+}
+
+header {
+  border-bottom: 1px solid #65C7F7;
+  display: flex;
+}
+header a {
+  position: relative;
+  margin-left: 3em;
+  text-decoration: none;
+  color: #e6dddd;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2rem;
+  font-style: italic;
+}
+header a:hover {
+  color: #65C7F7;
+  transform: scale(1.3);
+}
+header .img {
+  display: flex;
+  justify-content: start;
+  width: 50%;
+  margin-left: 5em;
+}
+header .img img {
+  width: 144.4px;
+}
+
+.main {
+  color: #e6dddd;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.main .text {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  background-color: rgba(230, 221, 221, 0.04);
+  border-radius: 30px;
+  padding: 1em;
+}
+.main .text:hover {
+  background-color: rgba(230, 221, 221, 0.3);
+}
+.main .text p {
+  font-size: 1rem;
+}
+.main .text .titolo {
+  margin: 1em auto;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.main .text .bottoni {
+  display: flex;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */

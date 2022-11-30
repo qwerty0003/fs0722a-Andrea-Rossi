@@ -1,0 +1,25 @@
+button{
+    margin: 1em;
+    padding: 0.5em 2em;
+    border-radius: 50px;
+    border: none;
+    font-family: $font-principale;
+}
+
+.btn1{
+    background-color: $bg-button1;
+    &:hover{
+        background-color: $bg-button2;
+        transform: scale(1.2) rotate(-5deg);
+        color: $colore-font;
+    }
+}
+.btn2{
+    background-color: $bg-button2;
+    color: $colore-font;
+    &:hover{
+        background-color: $bg-button1;
+        color: black;
+        transform: scale(1.2) rotate(5deg);
+    }
+}

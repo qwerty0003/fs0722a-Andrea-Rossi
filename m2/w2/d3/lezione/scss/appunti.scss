@@ -1,0 +1,131 @@
+nav{
+    display: block;
+
+    ul{
+        display: inline;
+        background: yellow;
+        border: 1px solid #000;
+    }
+}
+
+/*selettori nidificati*/
+
+#main{
+    p{
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    span{
+        font-size: 1.2em;
+        padding-left: 10px;
+    }
+    a{
+        color: red;
+        text-decoration: none;
+    }
+
+}
+
+/* ancora selettori nidificati */
+
+#main2{
+    background-color: darkred;
+    
+    div{
+        color: skyblue;
+        .red{
+            color: darkgreen;
+            a{
+                text-decoration: none;
+            }
+       }
+    }
+}
+
+/* nesting */
+.esempio {
+    background-color: darkslategray;
+    padding: 2em;
+    font-family: monospace;
+    text-align: center;
+
+    h1{
+        color: #191919;   
+    }
+
+    .titolo{
+        font-size: 52px;
+    }
+
+  
+    
+    .para{
+        font-size: 2rem;
+    
+    }
+
+    .bottone{
+        background-color: lightcoral;
+        display: grid;
+        margin: 0 auto;
+        padding: 0.5rem 1em;
+        border: none;
+        border-radius: 50px;
+
+    }
+}
+
+/*keyword &*/
+#pippo{
+    color: rebeccapurple;
+    font-size: 1.5em;
+    text-decoration: none;
+    &:hover{
+        text-decoration:underline;
+    }
+}
+
+.esempio2{
+    background-color: skyblue;
+    padding: 2rem 5rem;
+    h1{
+        text-align: end;
+        color: darkslategrey;
+        &:hover{
+            font-size: 52px;
+        }
+    }
+    .bottone{
+        display: grid;
+        margin: 0 auto;
+        border-radius: 50px;
+        border: 2px dashed blue;
+        padding: 0.3rem 3rem;
+        background-color: darkslategray;
+        &:hover{
+            padding: 1rem 20rem;
+        }
+    }
+}
+
+#main3{
+    color: #191919;
+    padding: 0 3rem;
+    &-sidebar{
+        border: 1px solid black;
+        padding: 10px;
+    }
+    body.firefox &{
+        font-size: 2rem;
+    }
+}
+
+/*propietà nidificate*/
+
+#main4{
+    font: {
+        family: monospace;
+        size:2rem;
+        weight:bold;
+    }
+}
