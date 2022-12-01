@@ -5,7 +5,7 @@ header {
   box-shadow: 0 0 10px black;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 0.4em;
 }
 header ul {
   display: flex;
@@ -77,6 +77,7 @@ footer {
   color: white;
   display: flex;
   justify-content: center;
+  border-radius: 15px;
 }
 footer .bi-stoplights:hover {
   color: green;
@@ -131,6 +132,7 @@ button:hover {
 @media screen and (min-width: 768px) {
   main {
     display: block;
+    margin-left: 7em;
   }
   main aside {
     width: 30%;
@@ -139,16 +141,17 @@ button:hover {
     border: none;
     position: -webkit-sticky;
     position: sticky;
-    top: 2.5em;
+    top: 5em;
   }
   main aside ul {
     display: block;
+    background: rgba(0, 0, 0, 0.09);
+    border-radius: 20px;
   }
   main aside ul li {
     font-size: 2rem;
     margin: 1em 0 0.4em 0;
     padding: 0 0.7em;
-    border-bottom: 1px dotted black;
   }
   main .main1 {
     width: 70%;

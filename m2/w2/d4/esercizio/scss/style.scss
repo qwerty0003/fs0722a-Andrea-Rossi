@@ -35,24 +35,24 @@ button {
 @media screen and (min-width:768px) {
     main {
         display: block;
-
+        margin-left: 7em;
         aside {
             width: 30%;
             float: right;
             height: 40vh;
             border: none;
             position: sticky;
-            top: 2.5em;
+            top: 5em;
 
             ul {
                 display: block;
-
+                background:rgba(0,0,0,0.09);
+                border-radius: 20px;
                 li {
                     font-size: 2rem;
                     margin: 1em 0 0.4em 0;
                     padding: 0 0.7em;
-                    border-bottom: 1px dotted black;
-                }
+                }                
             }
         }
 
