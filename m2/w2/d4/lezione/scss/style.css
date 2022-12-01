@@ -1,0 +1,152 @@
+body {
+  background-color: #041E42;
+}
+
+/*************************** EXTEND ******************/
+.box, .mybox {
+  border: 2px solid #000;
+  background-color: green;
+  margin: 40px auto;
+  width: 200px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.mybox {
+  font-size: 1.3em;
+}
+
+/****************** PLACEHOLDER % *****************************/
+.mySecondBox, .myFirstBox {
+  border: 2px solid black;
+  background-color: blue;
+  width: 300px;
+  margin: 10px auto;
+  padding: 20px;
+  transition: 1s linear;
+}
+.mySecondBox:hover, .myFirstBox:hover {
+  background-color: lightseagreen;
+  transform: scale(1.3) rotate(360deg);
+  border-radius: 50px;
+  box-shadow: 3px 3px 5px 5px black;
+}
+
+.myFirstBox {
+  font-size: 10px;
+}
+.myFirstBox:hover {
+  color: blue;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.mySecondBox {
+  font-size: 45px;
+}
+.mySecondBox:hover {
+  color: yellow;
+  font-size: 20px;
+}
+
+/*************************MIXINS*******/
+button.green {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #018749;
+  outline: 1px solid #018749;
+  box-shadow: 0 0 10px #018749;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 1.6rem;
+  transition: 0.5s ease-in;
+}
+button.green:hover {
+  color: #018749;
+  background: white;
+  transform: rotate(-360deg) scale(1.3);
+  box-shadow: none;
+}
+
+button.red {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #F40009;
+  outline: 1px solid #F40009;
+  box-shadow: 0 0 10px #F40009;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 1.6rem;
+  transition: 0.5s ease-in;
+}
+button.red:hover {
+  color: #F40009;
+  background: white;
+  transform: rotate(-360deg) scale(1.3);
+  box-shadow: none;
+}
+
+button.blue {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #1da1f2;
+  outline: 1px solid #1da1f2;
+  box-shadow: 0 0 10px #1da1f2;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 1.6rem;
+  transition: 0.5s ease-in;
+}
+button.blue:hover {
+  color: #1da1f2;
+  background: white;
+  transform: rotate(-360deg) scale(1.3);
+  box-shadow: none;
+}
+
+button.coral {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #FF6347;
+  outline: 1px solid #FF6347;
+  box-shadow: 0 0 10px #FF6347;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 1.6rem;
+  transition: 0.5s ease-in;
+}
+button.coral:hover {
+  color: #FF6347;
+  background: white;
+  transform: rotate(-360deg) scale(1.3);
+  box-shadow: none;
+}
+
+button.colorato {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #FFC72C;
+  outline: 1px solid #FFC72C;
+  box-shadow: 0 0 10px #FFC72C;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 1.6rem;
+  transition: 0.5s ease-in;
+}
+button.colorato:hover {
+  color: #FFC72C;
+  background: white;
+  transform: rotate(-360deg) scale(1.3);
+  box-shadow: none;
+}/*# sourceMappingURL=style.css.map */

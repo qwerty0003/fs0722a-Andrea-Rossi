@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap');
+@import 'header';
+@import 'aside';
+@import 'text';
+@import 'footer';
+@import 'form';
+
+body {
+    font-family: 'Dosis', sans-serif;
+    background: url(../imgs/cool-background.png);
+    background-size: cover;
+}
+
+button {
+    background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%);
+    margin: 0 auto;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #000;
+    border-radius: 10px;
+    display: block;
+    border: none;
+
+    &:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width:768px) {
+    main {
+        display: block;
+
+        aside {
+            width: 30%;
+            float: right;
+            height: 40vh;
+            border: none;
+            position: sticky;
+            top: 2.5em;
+
+            ul {
+                display: block;
+
+                li {
+                    font-size: 2rem;
+                    margin: 1em 0 0.4em 0;
+                    padding: 0 0.7em;
+                    border-bottom: 1px dotted black;
+                }
+            }
+        }
+
+        .main1 {
+            width: 70%;
+        }
+    }
+
+    #moveDx {
+        margin: {
+            left: 8em;
+            bottom: 2em;
+        }
+    }
+
+    #titolo{
+        text-align: center;
+    }
+}

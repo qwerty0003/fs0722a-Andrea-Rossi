@@ -1,0 +1,18 @@
+form{
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px dashed lightgrey;
+    
+    #textarea{
+        width: 90%;
+        margin: 5px;
+        color: gray;
+    }
+
+    input{
+        width: 45%;
+        margin: 5px;
+    }
+}

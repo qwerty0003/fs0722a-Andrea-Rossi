@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap");
+header {
+  background-image: linear-gradient(109.6deg, rgb(15, 2, 2) 11.2%, rgb(36, 163, 190) 91.1%);
+  border-radius: 15px;
+  box-shadow: 0 0 10px black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+header ul li {
+  list-style: none;
+  padding: 1em 0;
+}
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+aside {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  display: flex;
+  margin: 0 auto;
+}
+aside ul {
+  display: flex;
+  margin: 0 auto;
+}
+aside ul li {
+  list-style: none;
+  margin: 0 0.7em;
+  color: #191919;
+}
+aside ul li:hover {
+  transform: scale(1.2);
+  color: darkblue;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.2rem;
+  padding-bottom: 1em;
+}
+
+#titolo {
+  font-size: 4rem;
+  font-weight: 600;
+  background: -webkit-linear-gradient(#485563, #29323c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0.2em;
+}
+
+.titoletto {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#moveDx {
+  margin-left: 2em;
+  margin-bottom: 2em;
+  background-color: rgba(41, 50, 60, 0.19);
+  border-radius: 10px;
+  padding: 2px;
+}
+#moveDx .testimoni {
+  font-size: 1.1rem;
+}
+
+footer {
+  background-image: linear-gradient(109.6deg, rgb(15, 2, 2) 11.2%, rgb(36, 163, 190) 91.1%);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+footer .bi-stoplights:hover {
+  color: green;
+}
+footer .bi-globe-americas:hover {
+  color: skyblue;
+}
+
+form {
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px dashed lightgrey;
+}
+form #textarea {
+  width: 90%;
+  margin: 5px;
+  color: gray;
+}
+form input {
+  width: 45%;
+  margin: 5px;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  background: url(../imgs/cool-background.png);
+  background-size: cover;
+}
+
+button {
+  background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%);
+  margin: 0 auto;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #000;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: block;
+  }
+  main aside {
+    width: 30%;
+    float: right;
+    height: 40vh;
+    border: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2.5em;
+  }
+  main aside ul {
+    display: block;
+  }
+  main aside ul li {
+    font-size: 2rem;
+    margin: 1em 0 0.4em 0;
+    padding: 0 0.7em;
+    border-bottom: 1px dotted black;
+  }
+  main .main1 {
+    width: 70%;
+  }
+  #moveDx {
+    margin-left: 8em;
+    margin-bottom: 2em;
+  }
+  #titolo {
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

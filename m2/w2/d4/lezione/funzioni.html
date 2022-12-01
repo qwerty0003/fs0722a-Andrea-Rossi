@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- SASS estende la possibilità di generare CSS tramite funzioni 
+    
+        1) funzioni custom
+        2) funzioni predefinite
+
+        direttiva è @function
+    
+        esempio funzione custom:
+            @function em($pixel, $context: 16px){
+                @return ($pixel/$context)* 1em;
+            }
+            scss
+            h1{
+                font-size:em(18px);
+            }
+            css
+            h1{
+                font-size:1.125em;
+            }    
+    -->
+
+    <!-- funzioni speciali:
+            
+            url() -> gestire percorso assoluto o relativo
+
+            calc() -> fare operazioni aritmetiche
+
+            clamp() -> restringe tra un valore min ed uno max
+
+            min() | max() | min() max -> stabilisce un min, un max o entrambi
+    -->
+
+    <!-- moduli built-in:
+            sass:math -> operazioni matematiche es:
+                math.ceil(5.7)
+                math.clamp()  
+
+
+
+
+
+            sass:color -> propietà gestione colori es:
+                -darken(orange, 15%) +scuro
+                -lighten(orange, 20%) +chiaro
+                -trasparentize(#f00, 0.51) -> aggiungo canale alpha
+
+
+    
+    
+    -->
+
+    <div>
+        
+    </div>
+
+
+</body>
+</html>

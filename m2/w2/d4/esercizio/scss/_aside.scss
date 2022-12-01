@@ -1,0 +1,21 @@
+aside{
+    border:1px solid rgba(0, 0, 0,0.3) ;
+    border-radius: 5px;
+    display: flex;
+    margin: 0 auto;
+    ul{
+        display: flex;
+        margin: 0 auto;
+        li{
+            list-style: none;
+            margin: 0 0.7em;
+            color: #191919;
+            &:hover{
+                transform: scale(1.2);
+                color: darkblue;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
