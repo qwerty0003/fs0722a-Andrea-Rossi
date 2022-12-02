@@ -42,17 +42,22 @@ header {
   }
 }
 
-.opinioni {
-  display: flex;
-  margin: 0 auto;
+.carousel-item {
+  margin-top: 3%;
+  text-align: center;
 }
-.opinioni > div {
-  display: flex;
-  flex-direction: column;
+.carousel-item p {
+  font-size: 0.8rem;
+  margin: 20px 20%;
+  line-height: 2em;
 }
-.opinioni img {
-  width: 90px;
-  border-radius: 50px;
+.carousel-item img {
+  width: 5%;
+  border-radius: 50%;
+}
+.carousel-item h4 {
+  margin-top: 15px;
+  margin-bottom: 50px;
 }
 
 footer {
