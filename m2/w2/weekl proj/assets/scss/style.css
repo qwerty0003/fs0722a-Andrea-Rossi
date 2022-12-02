@@ -1,0 +1,67 @@
+p {
+  font-size: 1.2rem;
+}
+
+a {
+  font-size: 1.2rem;
+}
+
+.piccolo {
+  font-size: 0.8rem;
+}
+
+.titolo {
+  font-size: 2.3rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+header {
+  background-color: #6b17f1;
+}
+
+.topSect {
+  min-height: 50vh;
+  background-image: url(../imgs/pexels-aleksandar-pasaric-325185.jpg);
+  background-size: cover;
+  padding-left: 2em;
+  margin: 0;
+}
+.topSect button {
+  background-color: #6b17f1;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+}
+@media screen and (min-width: 768px) {
+  .topSect {
+    background-position-y: 40%;
+  }
+}
+
+.opinioni {
+  display: flex;
+  margin: 0 auto;
+}
+.opinioni > div {
+  display: flex;
+  flex-direction: column;
+}
+.opinioni img {
+  width: 90px;
+  border-radius: 50px;
+}
+
+footer {
+  background-color: #6b17f1;
+  color: white;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li:first-child {
+  font-size: 1.3rem;
+}/*# sourceMappingURL=style.css.map */
