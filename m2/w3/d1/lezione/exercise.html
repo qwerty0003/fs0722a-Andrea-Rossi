@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" id="form">
+        <input type="username" id="username">
+        <input type="password" id="password">
+        <button id="submit">Log-in</button>
+    </form>
+    <div id="data1"></div>
+    <div id="data2"></div>
+
+    <script>
+
+        function User(){
+            this.name = '';
+            this.accessID = -1;
+        }
+        
+        User.prototype.userType = {} ||null;
+
+        function Admin(){
+            this.id = 'ADMIN';
+            this.access = 'unlimited'
+        }
+
+
+
+        var EventHandler = {
+            CLICK: 'click',
+            MOUSE_OVER: 'mouseover',
+            MOUSE_OUT:'mouseout'
+        }
+
+        var user = new User()
+        var buttone = document.querySelector('#submit')
+        var usr = document.querySelector('#username')
+        var pwd = document.querySelector('#password')
+        var target1 = document.querySelector('#data1')
+        var target2 = document.querySelector('#data2')
+
+        buttone.addEventListener(EventHandler.CLICK, logIn)
+        
+        usr.addEventListener(EventHandler.MOUSE_OVER, onMouseOver)
+
+        function logIn(e){
+            if (usr.value == 'user' && pwd.value == '123'){
+                user.accessID = 0;
+                user.userType = null;
+            } else if (usr.value == 'admin' && pwd.value == '123'){
+                user.accessID = 1;
+                user.userType = new Admin();
+            } else{
+                user.accessID = -1;
+                user.userType = null;
+            }
+            user.name = usr.value;
+            
+
+            if (user.accessID > -1){
+                target1.innerHTML = 'Benvenuto ' + user.name;
+                target2.innerHTML = '';
+            } else{
+                target1.innerHTML = 'User o password errate';
+                target2.innerHTML = '';
+            }
+
+            if(user && user.userType){
+                if(user.userType.id = 'ADMIN'){
+                    target2.innerHTML = '<h2>Ruolo Admin</h2>'
+                }else {
+                    target2.innerHTML = '';
+                }
+            }
+        }
+
+        function onMouseOver(e){
+            e.target.title = "Inserisci il valore corretto"
+        }
+        
+    </script>
+    
+</body>
+</html>

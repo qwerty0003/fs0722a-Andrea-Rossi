@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ereditarietà</title>
+</head>
+<body>
+    <!-- possiamo modificare la struttura degli oggetti anche dopo la creazione -->
+    <script>
+
+    //var marioRossi = new persona("Mario","Rossi")
+    //var giuseppeVerdi = new persona("Peppe","Verdi")
+   // marioRossi.telefono = "867420839" //posso aggiungere all'oggetto qulacosa
+    // creo una nuova propietà a Mario Rossi senza influenzare la struttura di Giuseppe Verdi
+    //quando creo oggetti posso partire da una struttura di dati comune definita da un costruttore
+    // e poi la possiamo personalizzare in base alle nostre esigenze
+    //prototype -> persona.protoype.telefono = "73564238"
+    //tutti gli oggetti che avevamo creato con il costruttore persona ora hanno anche la propietà telefono
+
+    function Student(name, age){
+        this.name=name;
+        this.age=age;
+    }
+
+    var student1 = new Student ("Luigi Bianchi", 50)
+    var student2 = new Student ("Mario Rossi", 30)
+    console.log(student1,student2)
+
+    Student.prototype.skills = []
+    console.log(student1,student2)
+
+    student1.skills = ["HTML","CSS","JS"]
+    student2.skills = ["Surfare","Ballare","Suonare"]
+    console.log(student1,student2)
+
+    
+    </script>
+</body>
+</html>

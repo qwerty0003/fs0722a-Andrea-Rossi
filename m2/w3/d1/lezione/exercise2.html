@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="time"></div>
+    <div id="clock"></div>
+
+
+    <script>
+    {
+        let now = new Date()
+        let minuti = now.getMinutes()
+        let ore = now.getHours()
+        let secondi = now.getSeconds()
+        
+        let mesi = now.getMonth() //il conto dei mesi è quello degli array quindi gennaio sarà 0
+        let indiceGiorno = now.getDay()// conteggio dei giorni settimanali partendo da domenica 0 a sabato 6
+        let giorno = now.getDate()//numero giorno mensile
+        let anno = now.getFullYear()
+        
+        console.log(`${ore}:${minuti}:${secondi}`)
+
+        let timeStamp = now.getTime()
+        console.log(timeStamp)
+    }
+ 
+        
+        setInterval(function(){
+          
+            let ora = new Date()
+          
+            document.getElementById('time').textContent = ora  
+        
+        },1000) 
+
+
+        //oppure
+
+        function myClock(){
+            this.curDate = new Date()
+            this.hours = this.curDate.getHours()
+            this.minutes = this.curDate.getMinutes()
+            this.seconds = this.curDate.getSeconds()
+        }
+
+        myClock.prototype.run = function (){
+            setInterval(this.update.bind(this), 1000)
+        }
+    // bind è un metodo che crea una nuova funzione dove possiamo 'fissare' this
+    //altrimenti si perderebbe nelle funzioni di callback
+
+        myClock.prototype.update = function (){
+            this.updateTime(1)
+            console.log(this.hours + ':' + this.minutes + ':' + this.seconds)
+        }
+
+        myClock.prototype.updateTime = function (secs){
+            this.seconds+=secs;
+            if(this.seconds >= 60){
+                this.minutes++;
+                this.seconds=0;
+            }
+            if(this.minutes >= 60){
+                this.hours++;
+                this.minutes=0;
+            }
+            if(this.hours >= 24){
+                this.hours = 0;
+            }
+        }
+        var clock = new myClock()
+        clock.run()
+
+
+
+    </script>
+</body>
+</html>
