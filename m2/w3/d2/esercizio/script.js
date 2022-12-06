@@ -10,7 +10,7 @@ class Person {
         else if(pers1.age < pers2.age){
             return console.log(pers1.name + ' è più giovane di ' + pers2.name);
         }
-        else(pers1.age == pers2.age);{
+        else{
             return console.log(pers1.name + ' e ' + pers2.name + ' hanno la stessa età')
         }     
     }
