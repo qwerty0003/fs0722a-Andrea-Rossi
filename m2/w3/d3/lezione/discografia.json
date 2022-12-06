@@ -1,0 +1,34 @@
+{
+    "discografia": [
+        {
+            "title": "TA13OO",
+            "artist": "Denzel Curry",
+            "year": 2018,
+            "songs": [
+                {"title":"Black Balloons"},
+                {"title":"Percs"},
+                {"title":"Mad I Got It"}
+            ]
+        },
+        {
+            "title": "I Am > I Was",
+            "artist": "21 Savage",
+            "year": 2019,
+            "songs": [
+                {"title":"Monster"},
+                {"title":"Letter 2 My Momma"},
+                {"title":"All My Friends"}
+            ]
+        },
+        {
+            "title": "Hollywood's Bleeding",
+            "artist": "Post Malone",
+            "year": 2019,
+            "songs": [
+                {"title":"Wow"},
+                {"title":"Sunflowers"},
+                {"title":"Enemies"}
+            ]
+        }
+    ]
+}

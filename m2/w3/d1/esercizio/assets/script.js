@@ -16,11 +16,7 @@ document.getElementById("submit").onclick = function () {
         age = currentYear - birthDate;
         return age;
     }
-    ageY.innerHTML = getAge(date)
-  
-
-
-    return false;
+    ageY.innerHTML = getAge(date) 
 }
 
 

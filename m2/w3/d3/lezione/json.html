@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+
+    <!-- 
+    JSON (JavaScript Object Notation) 
+    è un formato(molto popolare) per lo scambio dei dati
+
+    JSON non è stato creato ma si basa sulla notazione letterale degli oggetti (già ben presente in JS)
+
+    JSON è stato riscoperto come formato principale per lo scambio dei dati soprattutto da quando esiste AJAX
+
+    sintassi di JSON si origina dagli oggetti letterali in JS
+
+-->
+
+    <script>
+
+        var JSON = {
+            propieta1: 'valore',
+            propieta2: 'valore',
+            propieta3: 'valore'
+        }
+//coppie propietà:valore separate da una virgola a parte l'ultima
+//l'intero oggetto viene racchiuso tra parentesi graffe{}
+//a differenza della notazione JS dentro JSON possono esserci valori semplici(no funzioni, no valori complessi)
+        /*  posso mettere:
+                stringhe
+                numeri
+                array
+                oggetti
+                boolean
+                null
+        */
+
+        //esempio
+        {
+            "home" : "Epicode.it",
+            "link" : "https://epicode.com",
+            "argument" : "Standard del web",
+            "aree" : [
+                {
+                    "area" : "CSS",
+                    "url" : "https://css.epicode.it"
+                }
+                {
+                    "area" : "JS",
+                    "url" : "https://javascript.epicode.it"
+                }
+            ]
+        }
+        /*
+        inizio con una coppia di parentesi graffe (che racchiudono tutta la struttura)
+
+        seguono coppie propietà:valore(che possono contenere valori atomici o altri oggetti -> [] )
+
+        JSON chiede che i valori e le propietà siano tra "doppi apici"
+
+        per accedere ai valori JSOn c'è la classica dot notation di JS
+        */
+       oggetto.home//se l'oggetto si chiamasse oggetto avrei "Epicode.it"
+       oggetto.link//se l'oggetto si chiamasse oggetto avrei "https://epicode.com"
+       var aree = oggetto.aree
+       for(var i = 0; i < aree.lenght; i += 0){
+        //
+       }
+       //JSON viene usato da JS tramite AJAX
+       //faccio una richiesta e viene restituito l'oggetto
+       $.ajax({
+        url:'json.html',
+        type:'GET',
+        dataType:'json',
+        success // ....
+       })
+    </script>
+</body>
+
+</html>

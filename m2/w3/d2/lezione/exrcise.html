@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <input type="text" id="nuovoUtente" placeholder="scrivi qualcosa..">
+        <button id="aggiungi">aggiungi</button>
+
+        <ul id="listaUtenti"></ul>
+    </div>
+
+<script>
+
+    let lista = document.querySelector('#listaUtenti')
+    let inputUser = document.querySelector('#nuovoUtente')
+    let aggiungiBtn = document.querySelector('#aggiungi')
+
+    let users = []
+
+    aggiungiBtn.addEventListener('click', () => {
+        let usr = new User(inputUser.value)
+        users.push(usr)
+        writeLi()
+    })
+
+    function writeLi(){
+        lista.innerHTML=''
+        users.forEach((el,index)=>{
+            lista.innerHTML+=(`<li>${el.logUser()}</li>`)
+        })
+    }
+
+    //class
+    class User{
+        name='';
+        constructor(name){
+            this.name=name;
+        }
+        logUser(){
+            return `<b>${this.name}</b>`
+        }
+    }
+
+</script>
+</body>
+
+</html>
