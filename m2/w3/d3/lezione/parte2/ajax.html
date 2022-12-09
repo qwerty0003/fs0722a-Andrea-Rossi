@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- eseguire delle richieste http in JS
+    oggetto built-in XMLHttpRequest
+    jquery $.ajax(); successo di questo metodo perchè più rapido
+    API fetch ha una sintassi più semplice e meglio integrata di XMLHttpRequest con il modello a oggetti su cui si basa JS
+    API fetch prevede la gestione delle chiamate asincrone con un meccanissmo di promise-->
+
+    <script>
+
+        fetch('https://epicode.com')//specifico una url su cui fare una richiesta http
+            .then(response =>{//gestisco il risultato con una promis -> in caso di successo entro nel ramo .then
+                console.log(response)//entro nel ramo .then -> ci viene fornita una risposta sotto forma oggetto response
+            })
+            .catch(error => console.log('Si è verificato un errore'))
+    </script>
+    <!-- propietà dell'oggetto response
+        
+        status -> è un valore che indica il codice di stato http (es. 200->successo)
+        statusText -> è una stringa associata al codice di stato ("OK" stringa associata al caso 200)
+        ok -> valore boolean (200/299 risposta positiva | altrimenti )
+    -->
+    <!--promise viene risolta ogni volta che c'è una risposta da parte del server,ma se entro nel ramo .then non è detto che arrivino i dati -->
+    <script>
+
+        fetch('https://epicode.com').then(response => {
+            if(response.ok){
+                console.log('content received')
+            }if(response.status >= 100 && response.status < 200){
+                console.log('Client informations')
+            }if(response.status >= 300 && response.status < 399){
+                console.log('Redirect')
+            }if(response.status >= 400 && response.status < 499){
+                console.log('Request error')
+            }if(response.status >= 500 && response.status < 599){
+                console.log('Server errors')
+            }            
+        }).catch(error => console.log('Error occurred'))
+        /* anche la condizione di errore sul server entra nel ramo .then
+        
+        in .catch ci entro solo quando il server non risponde del tutto(o è disconnesso)*/
+
+    </script>
+    <!-- leggere il contenuto della  risposta 
+        response ci mette a disposizione dei metodi per leggere il contenuto restituito dal server in base al tipo
+
+
+        text()->restituisce il contenuto in forma testuale
+        json()->fa il parsing del contenuto e lo restituisce in forma di oggetto
+        blob()->contenuto sotto forma di dati non strutturati
+        arrayBuffer()-> restituisce un contenuto strutturato in array buffer
+
+    -->
+    <script>
+
+        fetch('https://epicode.it/api/articoli/123').then(response => {
+            if(response.ok){
+                return response.json()
+            }
+        }).then(articolo => console.log(articolo.titolo)).catch(error => console.log('Error occurred'))
+        //di solito non ho una sola url nella richiesta ma devo specificare altri parametri
+
+        fetch('https://epicode.it/api/articoli/123', {
+            method:"post",
+            headers: new Headers({
+                "Content-Type":"application/json"//mi aspetto dei dati
+            }),
+            body: JSON.stringify({
+                titolo:"Titolo articolo",
+                autore:"Mario Rossi"
+            })
+        }).then(...).catch(...);
+        //oppure
+        var richiesta = new Request('https://epicode.it/api/articoli/123'),{
+            method:"post",
+            headers: new Headers({
+                "Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"//dati da un form
+            }),
+            body: new FormData(document.getElementById('titolo')...)
+            }.then(...).catch(...);
+            //funzione asincrone async/await
+            //eseguire operazioni asincrone in JS
+            /*
+                1.funzioni di callback(funzioni che vengono passate come parametri di altre funzioni)
+                2. promise -> posso vedere lo stato di esecuzione di un attività
+            */
+            /*
+            async/await sono basate sul meccanismo delle promise e semplificano la sintassi
+            async dichiara una funzione asincrona
+            await sospende l'esecuzione in attesa che la promise sia risolta(o rigettata)
+            */
+
+            //try/catch
+            async function getutente(UserId){ // get utente ha davanti async
+                try{//try/catch che intercetta i casi della promise
+                    let response = await fetch("/utente/"+ UserId)//await getUtente viene sospeso finchè fetch viene risolto
+                    console.log(response)
+                } catch{
+                    console.log("Error occurred")
+                }
+            }
+
+            //promise
+            /*
+            tre stati possibili:
+                1. resolved -> valore è disponibile -> attività asincrona restituisce un valore
+                2. rejected -> non viene restituito nessun valore
+                3. pending -> nè risolta nè rigettatat -> attività asincrona è partita ma non ha dato ancora risultati
+            */
+           var promise = new Promise(handler) // il parametro della promise ci permette di gestire il risultato
+           var promise = new Promise(function(resolve,reject){//due funzioni come parametri
+            if(condizione){
+                resolve(valore)//invoco resolve quando la promise è risolta
+            }else{
+                reject(motivo)//invoco reject quando la promise non è risolta
+            }
+           })
+
+           //promise e then
+           var myPromise = httpGet ("/utente/123")
+           myPromise.then(  //then
+            function(utente){
+                console.log("Server answered to " + utente.nome)
+            }, function(error){
+                console.log("Error occurred." + error.message)
+            }
+           )
+    </script>
+</body>
+</html>

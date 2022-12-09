@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        novità HTML:
+        nuovi tag audio,vieo,svg
+        nuove api geolocation, web workers, canvas e web storage
+
+        we storage nasce per risolvere un paio di problemi:
+        1.problema dei coockie(4k)
+        2.impossibile storare coockie differenziati tra due diverse sessioni di navigazione
+        per risolvere questi problemi->Web storage->
+        1.sessionStorage -> persistenza di dati finchè c'è una finestra di navigazione aperta
+        2.localStorage -> persistenza dei dati finchè vengono cancellati(i dati sono in comune a tutte le tab aperte) -> possono ospitare molti più dati, circa 5MB
+
+        SPECIFICHE
+        singola interfaccia storage -> sessionStorage e localStorage implementano lo stesso set di metodi
+     -->
+
+     <script>
+
+        localStoragae.nome= 'Federico'
+        localStoragae.cognome= 'De Federicis'//salvo i dati come in un normale array associativo
+        localStorage.setItem('nome','Federico') //o con l'ausilio dei metodi dedicati
+        localStorage.getItem('nome')//restituisce Federico
+        localStoragae.removeItem('nome')//rimuove una key dallo storage
+        
+        //come posso inserire oggetti diversi da stringhe
+        localStoragae.ordini = Array("1","2","3")
+        localStoragae.ordini;//ritorna "1,2,3"
+        //se ho dati diversi da stringhe devo usare JSON
+        localStoragae.ordini = JSON.stringify(Array(1,2,3))
+        JSON.parse(localStoragae.ordini)
+
+     </script>
+</body>
+</html>
