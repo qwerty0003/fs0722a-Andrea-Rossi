@@ -1,0 +1,253 @@
+@import 'grandezze';
+@import 'stili';
+@import 'colori';
+
+//gli dico di non andare a sommarmi i  padding o margini alle sezioni essendo che sto lavorando con bootstrap
+* {
+  @include no-somma;
+}
+
+//caratteristiche di tutto il body
+body {
+  @include altezza-body
+}
+
+//caratteristiche della right-bar e left-bar e main
+#left-bar {
+  overflow-y: scroll;
+  @include left-right;
+
+}
+
+// modifiche scrollbar
+
+::-webkit-scrollbar {
+  width: 8px;    /* vertical scrollbar */
+  height: 5px;   /* horizontal scrollbar */
+}
+
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: rgb(145, 145, 145);
+  border-radius: 1px;
+}
+
+//modifiche main
+#main {
+
+  background-color: #191414;
+  @include main;
+
+  @include sfondo-main;
+
+  overflow-y: scroll;
+
+  h1 {
+    margin: 0
+  }
+
+  p {
+    margin: 0;
+
+    color: white;
+    font-weight: bold;
+  }
+
+  .fedez {
+    margin-bottom: 0.6rem;
+  }
+
+  .ascolta {
+    margin-bottom: 0.3rem;
+  }
+
+  button {
+    @include bottoni;
+  }
+
+  .play {
+    @include play
+  }
+
+  .salva {
+    @include salva
+  }
+
+  .icona {
+    @include icona;
+  }
+}
+
+header {
+  
+  button {
+    background-color: transparent;
+    width: 9rem;
+    justify-content: space-between;
+    --bs-gutter-x: 0;
+    padding: 0;
+    border: 0;
+    background-color: black;
+
+    p {
+      font-size: 55%;
+    }
+
+    img {
+      width: 30%;
+      border-radius: 50%;
+    }
+
+    i {
+      color: white
+    }
+  }
+}
+#headHome{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.album {
+  @include image;
+}
+
+.scritte {
+  text-align: left;
+  margin: 0;
+}
+
+
+
+body {
+  overflow: overlay;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+//caratteristiche dei p
+p {
+  @include text-size;
+
+}
+
+//modifica blocchetti sotto buonasera
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include no-somma;
+}
+
+.blocchetti {
+  box-shadow: 1px 2px black;
+}
+
+.immagini {
+  margin: 0.5rem 1rem;
+  width: 15vh;
+}
+
+//right-bar 
+#notizie {
+  display: flex;
+  flex-direction: column;
+}
+
+.copy {
+  transform: rotate(90deg);
+}
+
+.icone {
+
+  @include icone;
+}
+
+.bi {
+  font-size: 0.6rem;
+
+}
+
+.giorni {
+  font-size: 0.4rem;
+}
+
+.mb-1 {
+  font-size: 0.6rem
+}
+
+.persona {
+
+  @include persona;
+}
+
+.tizio {
+  padding-left: 0.4rem;
+}
+
+.scritte-persona {
+  display: flex
+}
+
+.pers {
+
+  @include pers;
+}
+
+.attivita {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// media query
+
+@media screen and (max-width: 768px) {}
+
+.dekstop {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main {
+    width: 60%;
+
+  }
+}
+
+///// CARDS STYLE
+#pls{
+  .card{
+    background-color: $big_box-color;
+  }:hover{
+    background-color: $hover-color;
+    transition: 1s;
+    cursor: pointer;
+  }
+}
+#buonasera_blocks{
+  .blocchetti{
+    background-color: $small_box_color;
+  }:hover{
+    background-color: $hover-color-lighter;
+    transition: 1s;
+    cursor: pointer;
+  }
+}
+

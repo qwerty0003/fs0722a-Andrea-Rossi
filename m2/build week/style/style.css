@@ -1,0 +1,226 @@
+/* used COLORS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 100vh;
+}
+
+#left-bar {
+  overflow-y: scroll;
+  max-width: 20%;
+  text-align: left;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* vertical scrollbar */
+  height: 5px; /* horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(145, 145, 145);
+  border-radius: 1px;
+}
+
+#main {
+  background-color: #191414;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+  color: white;
+  overflow-y: scroll;
+}
+#main h1 {
+  margin: 0;
+}
+#main p {
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+#main .fedez {
+  margin-bottom: 0.6rem;
+}
+#main .ascolta {
+  margin-bottom: 0.3rem;
+}
+#main button {
+  font-size: 0.8rem;
+  border-radius: 4rem;
+  text-align: center;
+  padding: 0.3rem 1rem;
+  margin-bottom: 1vh;
+}
+#main .play {
+  background-color: #1DB954;
+  border: 0;
+}
+#main .salva {
+  border: 1px solid white;
+  background-color: transparent;
+  margin-left: 0.2rem;
+}
+#main .icona {
+  background-color: rgb(77, 73, 73);
+  border-radius: 50%;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+header button {
+  background-color: transparent;
+  width: 9rem;
+  justify-content: space-between;
+  --bs-gutter-x: 0;
+  padding: 0;
+  border: 0;
+  background-color: black;
+}
+header button p {
+  font-size: 55%;
+}
+header button img {
+  width: 30%;
+  border-radius: 50%;
+}
+header button i {
+  color: white;
+}
+
+#headHome {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.album {
+  margin: 0.5rem 1rem;
+  width: 20vh;
+}
+
+.scritte {
+  text-align: left;
+  margin: 0;
+}
+
+body {
+  overflow: overlay;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+p {
+  font-size: 0.5rem;
+}
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.blocchetti {
+  box-shadow: 1px 2px black;
+}
+
+.immagini {
+  margin: 0.5rem 1rem;
+  width: 15vh;
+}
+
+#notizie {
+  display: flex;
+  flex-direction: column;
+}
+
+.copy {
+  transform: rotate(90deg);
+}
+
+.icone {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bi {
+  font-size: 0.6rem;
+}
+
+.giorni {
+  font-size: 0.4rem;
+}
+
+.mb-1 {
+  font-size: 0.6rem;
+}
+
+.persona {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.tizio {
+  padding-left: 0.4rem;
+}
+
+.scritte-persona {
+  display: flex;
+}
+
+.pers {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.attivita {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dekstop {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  #main {
+    width: 60%;
+  }
+}
+#pls .card {
+  background-color: #171717;
+}
+#pls :hover {
+  background-color: #393939;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#buonasera_blocks .blocchetti {
+  background-color: #2a2a2a;
+}
+#buonasera_blocks :hover {
+  background-color: #4b4b4b;
+  transition: 1s;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

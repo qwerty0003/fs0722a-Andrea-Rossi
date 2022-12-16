@@ -1,0 +1,24 @@
+ESEMPIO:
+
+FEATURES: 		Sono un junior web designer appassionato di user experience.
+
+ADVANTAGES: 	Sviluppo interfacce semplici da utilizzare ed intuitive.
+
+BENEFITS: 		Miglioro l’esperienza e la soddisfazione degli utenti, così comprano di più.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+FEATURES: 		chi sei?
+
+ADVANTAGES: 	cosa sai fare?
+
+BENEFITS: 		quali benefici puoi portare al futuro datore di lavoro?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+MESSAGGIO FAB  =>
+Buongiorno recruiter#1,
+sono Andrea Rossi e sono un jr front-end developer, ho letto riguardo gli annunci delle posizioni aperte e sarei davvero molto interessato ad avere un colloquio. Seguo la start-up da quando è nata e mi renderebbe molto felice la possibilità di lavorare in un'azienda locale!
+Ad ogni modo, sono specializzato in UX/UI per rendere le pagine più facilmente navigabili, più accattivanti e responsive ad ogni tipo di dispositivo.
+Nei miei precedenti lavori ho riscontrato notevoli risultati come: un miglior posizionamento nelle ricerche di Google e maggiori vendite on-line per le aziende interessate.
+Allego il mio CV e dal mio profilo puoi controllare il mio sito personale ed il mio Git se eventualmente vorresti controllare i miei lavori.
