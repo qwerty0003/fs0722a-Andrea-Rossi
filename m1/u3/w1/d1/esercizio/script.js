@@ -9,21 +9,21 @@ var player2;
 //funzione di confronto
 function confrontaNumeri() {
     var random = randomNumber();
-    console.log(random); //inizializzo e mostro un numero random
+    console.log('Random number: ' + random); //inizializzo e mostro un numero random
     if (random === player1) {
-        return console.log('Player1 wins!'); //se il numero 1 è uguale al numero random allora log vittoria player1
+        console.log('Player1 wins!'); //se il numero 1 è uguale al numero random allora log vittoria player1
     }
     if (random === player2) {
-        return console.log('Player2 wins!'); //se il numero 2 è uguale al numero random allora log vittoria player2
+        console.log('Player2 wins!'); //se il numero 2 è uguale al numero random allora log vittoria player2
     }
     else {
         var sum1 = random - player1;
         var sum2 = random - player2; //calcolo le differenze e confronto il valore assoluto con log di conseguenza
         if (Math.abs(sum1) > Math.abs(sum2)) {
-            return console.log('Player 2 choosed closest number');
+            console.log('Player 2 choosed the closest number');
         }
         else {
-            return console.log('Player 1 choosed closest number');
+            console.log('Player 1 choosed the closest number');
         }
     }
     ;
