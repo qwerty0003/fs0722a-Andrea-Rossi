@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro typescript
+    </title>
+</head>
+
+<body>
+
+<!-- 
+problemi di JS:
+    1. tende ad essere disordinato
+    2.poca possibilità di abbracciare le caratteristiche dell'orientamento ad oggetti
+    3. il controllo del tipo di dato
+    4. non c'è controllo degli errori
+
+-> TYPESCRIPT "Typescript è JS per
+lo sviluppo su scala di applicazioni"
+differenze:
+    1.linguaggio fortemente tipizzato
+    2.è orientato agli oggetti
+    3.è contemporaneamente un linguaggio e un insieme di strumenti
+
+Typescript(.ts) è un super-set tipizzato di JS(.js)
+
+Typescript viene COMPILATO in js(sono i file .js che poi aggancio alla pagina)
+
+Dalla conoscenze base di JS aggiungo sintassi dedicate di TS e poi compilo da .ts a .js, il codice TS viene convertito nel suo equivalente JS per essere eseguito
+
+Il codice compilato è compatibile con qualsiasi framework, libreria ets JS esistente
+
+Perchè usare TS?
+    - transpiler -> mentre interpreto il codice .ts per generare l'output .js ho il controllo degli errori
+    -strong static typing -> sia il controllo del tipo di dato sia una sintassi per dedurlo/modificarlo
+
+    Componenti di Typescript
+    -linguaggio(sintassi,keyword,annotazioni di tipo)
+    -Compiler (tsc) converte le istruzioni TS nell'equivalente JS
+    -TS language service (servizio che aiuta la compilazione del codice .ts)
+
+
+passaggi
+    1. salvo il file in formato .ts
+    2. apro il terminale
+    3.nella cartella giusta lancio nel terminale il comando "tsc nomeFile.ts"
+    4. se lancio il cmd "node nomrFile.js" eseguirò il file nel terminale
+
+flag del compilatore (preceduti da tsc)
+    --help (stampa la guida)
+    --watch (controlla le modifiche e ricompila i file) 'https://www.typescriptlang.org/docs/handbook/configuring-watch.html'
+
+    --module (carica moduli esterni)
+    --target (imposta la versione ECMA di destinazione)
+    --out (compilare più file in un unico output)
+    link >>> 'https://www.typescriptlang.org/docs/handbook/compiler-options.html'
+
+tsconfig.json
+    >>'https://www.typescriptlang.org/tsconfig'
+
+    >>'https://www.typescriptlang.org/docs/handbook/tsconfig-json.html'
+
+
+    alternativa è usare tsc + nomedelfile.ts
+    
+    posso compilare più file "tsc file1.ts, fil2.ts, file3.ts"
+
+Regole di sintassi basilari
+    -nomenclatura degli identificatori -> possono includere caratteri e cifre ma non possono cominciare con una cifra, non possono usare caratteri speciali tranne _underscore e $dollaro, non possono essere parole chiave (switch, for, while, this, static, try, etc..), devono essere unici, case sensitive, niente spazi
+
+    ok -> firstName, person_name, num1, $result
+    no -> Var, first name, first-name, 1number
+    - TS ignora gli spazi(usiamo spazi e tab per tenere il codice più pulito)
+    -puntiEvirgole;; sono facoltativi(ma non se metto più istruzioni su una riga)
+    -i commenti sono //signle-row o /* multi-row */ (come CSS e JS)
+    - TS è JS orientato agli oggetti:
+        -> consideriamo un programma come una raccolta di oggetti che comunicano tra loro tramite nodi
+        -> gli oggetti rappresentano un entità (hanno tre caratteristiche stato, comportamento, identità)
+        -> gli oggetti hanno delle classi cioè dei modelli su cui vengono creati
+        -> gli oggetti hanno dei metodi per comunicare tra di loro
+    
+    Tipi di dati in TS:
+        -number 
+        -string
+        -boolean
+        -null -> la variabile è impostata su un valore che non è definito
+        -undefined -> la variabile non ha alcun valore
+
+    -void-> assenza di valora(si usa quando una funzione non restituisce nessun valore)
+    es:
+    function myFunction():void{
+        console.log("Messaggio")
+    }-lo uso sulla funzione perchè se dichiaro una variabileù:void poi potrò assegnare solo valori null ed undefined
+    
+    -any -> la variabile contiene qualisisi tipo di dato (come JS)
+    es:
+    var myVar:any = 123
+    myVar "una stringa!"
+    myVar = true assume dinamicamente qualsiasi valore come in JS
+
+    tipi definiti dall'utente: enum, classi, interfacce, array, tuple
+ -->
+
+
+
+</body>
+
+</html>
