@@ -29,12 +29,12 @@ var BankAccount = /** @class */ (function () {
     };
     BankAccount.prototype.twoDeposit = function (n, n1) {
         var newBalance = (this.balanceinit + n + n1);
-        console.log('After this deposit(unknown ATM) your new balance is: ' + newBalance);
+        console.log('After this double deposit your new balance is: ' + newBalance);
         this.balanceinit = newBalance;
     };
     BankAccount.prototype.twoWithDraw = function (n, n1) {
         var newBalance = (this.balanceinit - n - n1);
-        console.log('After this withdraw(unknown ATM) your new balance is: ' + newBalance);
+        console.log('After this double withdraw your new balance is: ' + newBalance);
         this.balanceinit = newBalance;
     };
     return BankAccount;

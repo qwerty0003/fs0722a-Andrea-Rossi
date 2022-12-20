@@ -15,12 +15,12 @@ class BankAccount { //creo una classe
     }
     twoDeposit(n:number,n1:number){ //metodo per deposito ad un altra banca
         let newBalance = (this.balanceinit + n + n1);
-        console.log('After this deposit(unknown ATM) your new balance is: '+newBalance)
+        console.log('After this double deposit your new balance is: '+newBalance)
         this.balanceinit = newBalance
     }
     twoWithDraw(n:number,n1:number){ //metodo per prelievo ad un altra banca
         let newBalance = (this.balanceinit - n - n1);
-        console.log('After this withdraw(unknown ATM) your new balance is: '+newBalance)
+        console.log('After this double withdraw your new balance is: '+newBalance)
         this.balanceinit = newBalance
     }
 }
