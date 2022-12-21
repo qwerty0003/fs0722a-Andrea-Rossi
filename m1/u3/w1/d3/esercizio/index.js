@@ -87,9 +87,18 @@ var gigi = new Persona(20000, 'Gigi Bianchi'); //20k
 var piero = new Persona(35000, 'Piero Neri'); //35k
 var gino = new Persona(60000, 'Gino Rossi'); //60k fratello di Mario
 var riccone = new Persona(500000, 'Richie Rich'); //500k
-console.log(mario, gigi, piero, riccone);
+//log varie persone
+console.log(mario, gigi, piero, gino, riccone);
+//calcolo reddito al netto delle tasse
 mario.getRedditoAnnuoNetto();
 gigi.getRedditoAnnuoNetto();
 piero.getRedditoAnnuoNetto();
 gino.getRedditoAnnuoNetto();
 riccone.getRedditoAnnuoNetto();
+var button = document.getElementById('btn');
+button === null || button === void 0 ? void 0 : button.addEventListener('click', function () {
+    var nome = document.getElementById('nome').value;
+    var reddito = document.getElementById('reddito').value;
+    var user = new Persona(Number(reddito), String(nome));
+    document.getElementById('output').innerHTML = "\n    <h2>Ciao ".concat(user.name, "</h2>\n    <h4>INPS: ").concat(user.tasseinps, "</h4>\n    <h4>IRPEF: ").concat(user.tasseirpef, "</h4>\n    <h4>Reddito tassabile: ").concat(user.getUtileTasse(), "</h4>\n    <h4>Reddito annuo al netto delle tasse: ").concat(user.getRedditoAnnuoNetto(), "</h4>");
+});

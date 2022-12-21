@@ -112,3 +112,18 @@ gigi.getRedditoAnnuoNetto()
 piero.getRedditoAnnuoNetto()
 gino.getRedditoAnnuoNetto()
 riccone.getRedditoAnnuoNetto()
+
+let button = <HTMLButtonElement>document.getElementById('btn')
+button?.addEventListener('click',()=>{
+    let nome = (<HTMLInputElement>document.getElementById('nome')).value
+    let reddito = (<HTMLInputElement>document.getElementById('reddito')).value
+
+    let user = new Persona(Number(reddito),String(nome));
+
+    (<HTMLDivElement>document.getElementById('output')).innerHTML = `
+    <h2>Ciao ${user.name}</h2>
+    <h4>INPS: ${user.tasseinps}</h4>
+    <h4>IRPEF: ${user.tasseirpef}</h4>
+    <h4>Reddito tassabile: ${user.getUtileTasse()}</h4>
+    <h4>Reddito annuo al netto delle tasse: ${user.getRedditoAnnuoNetto()}</h4>`
+})
