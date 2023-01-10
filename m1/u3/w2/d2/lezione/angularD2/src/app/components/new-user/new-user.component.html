@@ -1,0 +1,15 @@
+<form>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-auto">
+      <input placeholder="Inserisci un nome..."
+        type="name"
+        name="nome" [(ngModel)]="name" class="rounded">
+    </div>
+    <div class="col-auto">
+      <span class="form-text">
+        Must be a name.
+      </span>
+    </div>
+  </div>
+  <button type="button" class="btn btn-outline-danger m-2" (click)="onNewUser(name)">SUBMIT</button>
+</form>

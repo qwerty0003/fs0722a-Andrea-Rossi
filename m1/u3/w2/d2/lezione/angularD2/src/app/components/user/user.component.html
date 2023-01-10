@@ -1,0 +1,7 @@
+<div *ngIf="user.nome">
+  <p>
+    {{user.nome}} è nello stato {{user.stato}}
+  </p>
+  <button type="button" class="btn btn-outline-success m-2" (click)="onChangeStatus('occupato')">OCCUPATO</button>
+  <button type="button" class="btn btn-outline-warning m-2" (click)="onChangeStatus('libero')">LIBERO</button>
+</div>
