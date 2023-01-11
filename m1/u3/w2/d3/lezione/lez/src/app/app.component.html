@@ -1,0 +1,15 @@
+<div
+  class="container d-flex flex-column justify-content-center align-items-center font-monospace"
+>
+  <h1>Parent Child</h1>
+  <app-card>
+    <h5 class="card-title">Titolo card</h5>
+    <div class="card-body">
+      <app-user-info
+        [user]="utente"
+        *ngFor="let utente of users"
+      ></app-user-info>
+    </div>
+  </app-card>
+</div>
+<a  class="d-flex text-decoration-none justify-content-center btn btn-outline-warning" href="https://google.it">Google Inc&copy;</a>

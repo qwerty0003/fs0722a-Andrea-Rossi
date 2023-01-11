@@ -1,0 +1,12 @@
+
+<label for="newName">Nome</label>
+<input type="text" name="newName" class="form-control" [(ngModel)]="newName">
+
+<label for="newSurname">Cognome</label>
+<input type="text" name="newSurname" class="form-control" [(ngModel)]="newSurname">
+
+<app-eta [(eta)]="newAge"></app-eta>
+
+<button type="button" class="btn btn-primary me-2 float-end" (click)="onAddMan()">AGGIUNGI UOMO</button>
+<button type="button" class="btn btn-danger me-2 float-end" (click)="onAddWoman()">AGGIUNGI DONNA</button>
+

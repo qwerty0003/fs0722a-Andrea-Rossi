@@ -1,5 +1,5 @@
 <div *ngFor="let post of posts">
-  <div class="card"  *ngIf="post.active == true">
+  <div [ngClass]="{'bg-warning': post.type}" class="card"  *ngIf="post.active == true">
     <h5 class="card-title">{{ post.title }}</h5>
     <div class="card-body">
       {{ post.body }}

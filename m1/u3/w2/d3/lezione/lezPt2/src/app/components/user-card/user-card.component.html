@@ -1,0 +1,9 @@
+<div class="card m-3">
+    <div class="card-header">
+        {{element.name + ' ' + element.surname + ' di anni ' + element.age}}
+    </div>
+    <div class="card-body">
+        <b *ngIf="element.sex === 'Uomo'" class="text-primary">{{element.sex}}</b>
+        <i *ngIf="element.sex === 'Donna'" class="text-danger">{{element.sex}}</i>
+    </div>
+</div>
