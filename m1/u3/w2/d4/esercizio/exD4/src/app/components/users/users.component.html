@@ -1,0 +1,9 @@
+<ul class="list-group my-4">
+  <li class="list-group-item" *ngFor="let u of users">
+    <a class="text-decoration-none" routerLink="{{u.id}}" routerLinkActive="active"
+      >{{ u.name }}
+    </a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+<a class="btn btn-outline-dark d-flex justify-content-center m-5" routerLink="/users">Torna alla pagina utenti</a>

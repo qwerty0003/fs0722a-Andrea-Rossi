@@ -17,6 +17,6 @@ export class ActivePostsComponent implements OnInit {
   ngOnInit(): void {}
 
   gimmeFalse() {
-    this.statusChange.emit(false)
+    
   }
 }

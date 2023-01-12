@@ -3,5 +3,6 @@ export interface Post {
   body: string;
   title: string;
   active: boolean;
-  type:"news"|"politic"|"education"
+  type: 'news' | 'politics' | 'educational';
+  author: string;
 }

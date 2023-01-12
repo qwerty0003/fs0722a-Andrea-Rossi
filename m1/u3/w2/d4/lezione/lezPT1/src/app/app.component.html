@@ -1,0 +1,28 @@
+<div class="container text-center font-monospace">
+    <!-- direttiva di attributo -->
+    <h1 class="display-2" appColora [defaultColor]="'red'">CIAO</h1>
+
+    <h3>
+        Hello <span appColora="'#a6574e'" [defaultColor]="'blue'">World!</span>
+    </h3>
+
+    <!-- direttiva di modifica template -->
+    <button type="button" class="btn btn-outline-primary" (click)="active = !active">TOGGLE</button>
+
+    <!-- MODO 1: utilizzo della direttiva -->
+    <h3 *ngIf="active">{{'Riga di testo predefinita' | uppercase}}</h3>
+    <h3 *appComparsa="active">{{'Riga di testo alternativa' | uppercase}}</h3>
+
+    <!-- MODO 2: If alternativi -->
+    <h3 *ngIf="active">Riga di testo predefinita</h3>
+    <h3 *ngIf="!active">Riga di testo alternativa</h3>
+
+    <!-- MODO 3: ng-template -->
+    <h2>Clicca per vedere i nostri prodotti di punta!</h2>
+    <button type="button" class="btn btn-outline-danger" (click)="active = !active">CLICCA</button>
+    <h3 *ngIf="active; else alternativo">Dai pls</h3>
+    <ng-template #alternativo>
+        <h3>Riga di testo alternativa</h3>
+    </ng-template>
+
+</div>

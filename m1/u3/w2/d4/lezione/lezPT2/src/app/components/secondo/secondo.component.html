@@ -1,0 +1,11 @@
+<h1 class="text-center">Secondo Component</h1>
+<h3>
+    Questo component ha due children che si attivano con i pulsanti presenti
+    nella pagina
+</h3>
+<div class="container d-flex justify-content-around">
+    <a class="btn btn-outline-warning" [routerLink]="['secondoA']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">PRIMO CHILD</a>
+    <a class="btn btn-outline-warning" [routerLink]="['secondoB']" routerLinkActive="active">SECONDO CHILD</a>
+    <a class="btn btn-outline-warning" [routerLink]="['/secondo']" routerLinkActive="active">TORNA AL SECONDO COMPONENT</a>
+</div>
+<router-outlet></router-outlet>

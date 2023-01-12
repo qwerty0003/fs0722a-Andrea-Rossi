@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h1>Post Inattivi</h1>
+
+  <div *ngFor="let p of posts">
+    <!-- <app-post-card [post]="p" (toggleEmit)="attiva($event)"></app-post-card> -->
+    <app-post-card [post]="p">
+      <button (click)="attiva(p.id)" class="btn btn-outline-dark m-2">
+        Attiva
+      </button>
+      <a class="btn btn-outline-dark m-2" routerLink="/inactive/details/{{p.id}}">Dettagli</a>
+    </app-post-card>
+  </div>
+</div>
