@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <h1>Post Attivi</h1>
+  <h1 class="text-center">Post Attivi</h1>
 
-  <div *ngFor="let p of posts">
+  <div *ngFor="let p of posts" class="d-flex justify-content-center">
     <!-- <app-post-card [post]="p" (toggleEmit)="disattiva($event)"></app-post-card> -->
     <app-post-card [post]="p">
       <button (click)="disattiva(p.id)" class="btn btn-outline-dark m-2">

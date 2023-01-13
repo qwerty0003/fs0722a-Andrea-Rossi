@@ -1,6 +1,13 @@
-<div class="container">
-  <h1>{{p.title}}</h1>
-  <p>{{p.body}}</p>
-  <p>Categoria: {{p.type}}</p>
-  <p>Autore: {{p.author}}</p>
+<div class="container my-4">
+  <h1>
+    {{ p.title | uppercase }} -
+    <span appEvidenzia>ID: {{ p.id }}</span>
+    <span class="fs-5 text-success mx-2" *ngIf="p.active == true">Attivo</span>
+    <span class="fs-5 text-danger mx-2" *ngIf="p.active == false">
+      Inattivo
+    </span>
+  </h1>
+  <p class="fs-5">{{ p.body }}</p>
+  <p class="fs-4" appEvidenzia>Categoria: {{ p.type }}</p>
+  <p class="fs-4" appEvidenzia>Autore: {{ p.author }}</p>
 </div>

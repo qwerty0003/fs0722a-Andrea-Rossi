@@ -1,9 +1,16 @@
-<ul class="list-group my-4">
-  <li class="list-group-item" *ngFor="let u of users">
-    <a class="text-decoration-none" routerLink="{{u.id}}" routerLinkActive="active"
-      >{{ u.name }}
-    </a>
-  </li>
-</ul>
-<router-outlet></router-outlet>
-<a class="btn btn-outline-dark d-flex justify-content-center m-5" routerLink="/users">Torna alla pagina utenti</a>
+<div class="d-flex justify-content-center row">
+  <ul class="list-group my-4 w-25 text-center">
+    <li class="list-group-item" *ngFor="let u of users">
+      <a
+        class="text-decoration-none text-dark"
+        routerLink="{{ u.id }}"
+        routerLinkActive="active"
+        >{{ u.name }}
+      </a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+  <a class="btn btn-outline-dark rounded-pill my-1 w-25" routerLink="/users"
+    >Torna alla pagina utenti</a
+  >
+</div>

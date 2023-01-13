@@ -1,3 +1,6 @@
-<h1>{{u.name}}</h1>
-<h5>E-mail: {{u.email}}</h5>
-<h5>ruolo: {{u.role}}</h5>
+<div class="text-center">
+  <h1>{{ u.name }}</h1>
+  <h5>E-mail: {{ u.email }}</h5>
+  <h5>Ruolo: {{ u.role }}</h5>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Connecticut_ComiCONN_Superhero_Mascot..jpg" alt="Connecticut_ComiCONN_Superhero_Mascot" *ngIf="u.role == 'admin'">
+</div>
