@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from 'src/app/movies.service';
 import { Favorite, LikeService } from 'src/app/like.service';
 
+
 export interface Movie {
   adult: boolean;
   backdrop_path: string;
