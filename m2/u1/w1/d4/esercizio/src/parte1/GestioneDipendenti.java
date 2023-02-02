@@ -6,7 +6,7 @@ public class GestioneDipendenti {
 		Dipendente op1 = new Dipendente("mat:666", Dipartimento.PRODUZIONE);
 		Dipendente op2 = new Dipendente("mat:777", Dipartimento.PRODUZIONE);
 		Dipendente imp = new Dipendente("mat:765", 8000, 40, Livello.IMPIEGATO, Dipartimento.AMMINISTRAZIONE);
-		Dipendente dir = new Dipendente("mat:009", 100, 50, Livello.DIRIGENTE, Dipartimento.VENDITE);
+		Dipendente dir = new Dipendente("mat:009", 3000, 50, Livello.DIRIGENTE, Dipartimento.VENDITE);
 
 		System.out.println(" ");
 		op1.promuovi();
@@ -17,10 +17,10 @@ public class GestioneDipendenti {
 		imp.stampaDatiDipendente();
 		dir.stampaDatiDipendente();
 		System.out.println(" ");
-		Dipendente.calcolaPagaPlus(op1, 5);
-		Dipendente.calcolaPagaPlus(op2, 5);
-		Dipendente.calcolaPagaPlus(imp, 5);
-		Dipendente.calcolaPagaPlus(dir, 5);
+		Dipendente.calcolaPaga(op1, 5);
+		Dipendente.calcolaPaga(op2, 5);
+		Dipendente.calcolaPaga(imp, 5);
+		Dipendente.calcolaPaga(dir, 5);
 		System.out.println(" ");
 		System.out.println(" PROVE CONTROLLI STIPENDIO ");
 		Dipendente d1 = new Dipendente("mat:0091", 1900, 50, Livello.OPERAIO, Dipartimento.VENDITE);

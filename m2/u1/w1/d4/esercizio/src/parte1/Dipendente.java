@@ -1,8 +1,8 @@
 package parte1;
 
 public class Dipendente {
-	//dichiarazione variabile
 	
+	//dichiarazione variabile	
 	static public double stipendioBase = 1000;
 	private String matricola;
 	private double stipendio;
@@ -129,7 +129,7 @@ public class Dipendente {
 		return guy.getStipendio();
 	}
 
-	public static double calcolaPagaPlus(Dipendente guy, int h) {
+	public static double calcolaPaga(Dipendente guy, int h) {
 		double stipendio = guy.getImportoOrarioStraordinario() * h;
 		double newStip = guy.getStipendio() + stipendio;
 		System.out.println("Stipendio mensile con " + h + " ore di straordinario: " + newStip);
