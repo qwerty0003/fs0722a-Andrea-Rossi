@@ -8,7 +8,8 @@ public class Main {
 	static ElementoMultimediale[] lettori = new ElementoMultimediale[5];
 
 	public static void main(String[] args) {
-
+		
+		
 		superPlay();
 
 	}
@@ -30,7 +31,7 @@ public class Main {
 				lettori[i] = new Video(titolo, durata);
 				System.out.println(lettori[i]);
 			} else if (tipo.equals("Immagine")) {
-				lettori[i] = new Audio(titolo, 1);
+				lettori[i] = new Immagine(titolo, 1);
 				System.out.println(lettori[i]);
 			} else {
 				System.out.println("Inserisci il valore corretto");
