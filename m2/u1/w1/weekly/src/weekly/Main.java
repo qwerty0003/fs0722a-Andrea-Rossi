@@ -8,8 +8,7 @@ public class Main {
 	static ElementoMultimediale[] lettori = new ElementoMultimediale[5];
 
 	public static void main(String[] args) {
-		
-		
+
 		superPlay();
 
 	}
@@ -37,19 +36,21 @@ public class Main {
 				System.out.println("Inserisci il valore corretto");
 			}
 		}
+
 		int num;
+
 		do {
 			System.out.println("Inserisci un numero tra 0 e 5:");
 			num = Integer.parseInt(sc.nextLine());
-			if(num>0 && num <= 5) {
-			if (lettori[num-1] instanceof Audio || lettori[num-1] instanceof Video) {
-				lettori[num-1].play();
-			} else {
-				lettori[num-1].show();
-			}
-			}else if(num == 0){
+			if (num > 0 && num <= 5) {
+				if (lettori[num - 1] instanceof Audio || lettori[num - 1] instanceof Video) {
+					lettori[num - 1].play();
+				} else {
+					lettori[num - 1].show();
+				}
+			} else if (num == 0) {
 				System.out.println("Fine riproduzione");
-			}else {
+			} else {
 				System.out.println("Errore inserisci un numero tra 0 e 5");
 			}
 		} while (num != 0);
