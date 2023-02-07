@@ -20,14 +20,17 @@ public class part2 {
 			int lt = Integer.parseInt(sc.nextLine());
 			double kmPLt;
 			kmPLt = km / lt;
-			System.out.println("Hai consumeto un litro ogni " + kmPLt + "km.");
+			System.out.println("Percorri " + kmPLt + "km al litro.");
+			if(kmPLt > 50) 
+				System.out.println(" ");System.out.println("Complimenti!");
+			
 
 		} catch (NumberFormatException ex) {
 			System.out.println("Inserisci il valore corretto per favore!");
 			System.out.println("Riproviamo :')");
 			kmPerLt();
 		} catch (ArithmeticException ex) {
-			System.out.println("0 litri consumati? Che macchina hai?");
+			System.out.println("Beh la tua macchina consuma davvero poco allora");
 			System.out.println("Riproviamo :')");
 			kmPerLt();
 		}
