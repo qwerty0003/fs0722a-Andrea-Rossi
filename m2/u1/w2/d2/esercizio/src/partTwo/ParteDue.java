@@ -3,11 +3,6 @@ package partTwo;
 import java.util.ArrayList;
 import java.util.Random;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import partOne.ParteUno;
-
 public class ParteDue {
 
 	static Random rand = new Random();

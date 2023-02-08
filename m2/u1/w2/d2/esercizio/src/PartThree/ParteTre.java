@@ -18,8 +18,11 @@ public class ParteTre {
 		insert("Mike", 696);
 		stampa();
 		delete("Jesus");
+		delete("Gesù");
 		insertConsole();
 		insertConsole();
+		insert("Dio", 666);
+		insert("Mike", 000);
 		stampa();
 		searchByName("Andre");
 		searchByName("Andrea");
@@ -31,7 +34,12 @@ public class ParteTre {
 	}
 
 	public static void insert(String nome, int numero) {
-		contatti.put(nome, numero);
+		if (contatti.containsValue(numero)) {
+			System.out.println("Numero esistente, non posso inserirlo in rubrica!");
+		} else if (contatti.containsKey(nome)) {
+			System.out.println("Contatto esistente, non posso inserirlo in rubrica!");
+		} else
+			contatti.put(nome, numero);
 	}
 
 	public static void insertConsole() {
@@ -39,11 +47,21 @@ public class ParteTre {
 		String nome = sc.nextLine();
 		System.out.println("Inserisci il numero di telefono: ");
 		Integer numero = Integer.parseInt(sc.nextLine());
-		contatti.put(nome, numero);
+		if (contatti.containsValue(numero)) {
+			System.out.println("Numero esistente, non posso inserirlo in rubrica!");
+			insertConsole();
+		} else if (contatti.containsKey(nome)) {
+			System.out.println("Contatto esistente, non posso inserirlo in rubrica!");
+			insertConsole();
+		} else
+			contatti.put(nome, numero);
 	}
 
 	public static void delete(String nome) {
-		contatti.remove(nome);
+		if(contatti.containsKey(nome))
+			contatti.remove(nome);
+		else
+			System.out.println("Non esiste un contatto con questo nome: "+nome);
 	}
 
 	public static <T, E> T searchByNum(HashMap<T, E> map, E value) {
