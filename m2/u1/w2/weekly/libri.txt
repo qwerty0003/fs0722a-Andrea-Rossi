@@ -1,0 +1,3 @@
+Titolo: Miao, autore: unGatto, anno di pubblicazione: 2010, genere: felino
+Titolo: Ecco, autore: Nessuno, anno di pubblicazione: 1989, genere: fantasy
+Titolo: hello, autore: world, anno di pubblicazione: 2015, genere: javascript

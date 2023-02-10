@@ -1,0 +1,3 @@
+Titolo: Ciao, periodicita: MENSILE, anno di pubblicazione: 2023, ISBN: 23
+Titolo: Gatti, periodicita: SETTIMANALE, anno di pubblicazione: 2000, ISBN: 566
+Titolo: Cani, periodicita: MENSILE, anno di pubblicazione: 1789, ISBN: 344
