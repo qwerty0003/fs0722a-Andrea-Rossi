@@ -43,6 +43,8 @@ CREATE TABLE fatture(
 INSERT INTO clienti (nome,cognome,datanascita,regioneresidenza) VALUES ('Beppe','Verdi',1980,'Lazio');
 INSERT INTO clienti (nome,cognome,datanascita,regioneresidenza) VALUES ('Nino','Neri',1982,'Calabria');
 INSERT INTO clienti (nome,cognome,datanascita,regioneresidenza) VALUES ('Mariolino','Bianchi',1990,'Lombardia');
+INSERT INTO clienti (nome,cognome,datanascita,regioneresidenza) VALUES ('Marko','Karta',1980,'Molise');
+
 
 INSERT INTO fornitori (denominazione,regioneresidenza) VALUES ('Carne a volontà','Lombardia');
 INSERT INTO fornitori (denominazione,regioneresidenza) VALUES ('Pesce & Crostacei','Calabria');
@@ -60,6 +62,7 @@ INSERT INTO fatture (tipologia,importo,iva,datafattura,idcliente,numerofornitore
 INSERT INTO fatture (tipologia,importo,iva,datafattura,idcliente,numerofornitore) VALUES ('A',124.75,20,2021,3,3);
 INSERT INTO fatture (tipologia,importo,iva,datafattura,idcliente,numerofornitore) VALUES ('B',27.45,14,2023,4,1);
 INSERT INTO fatture (tipologia,importo,iva,datafattura,idcliente,numerofornitore) VALUES ('A',77.45,20,2021,4,1);
+INSERT INTO fatture (tipologia,importo,iva,datafattura,idcliente,numerofornitore) VALUES ('A',760.00,20,2020,5,3);
 */
 
 /*TRUNCATE fatture;
@@ -76,7 +79,8 @@ SELECT count(numerofatture)"Il numero delle fatture con IVA al 20%"
 FROM fatture WHERE iva = 20;
 
 --num fatture e somma importi divise per anno
-SELECT datafattura,count(*)"Numero fatture",sum(importo)"Somma importi" 
+SELECT datafattura as anno,count(*)"Numero fatture",
+sum(importo)"Somma importi" 
 FROM fatture GROUP BY datafattura;
 
 --prod attivati nel 2017 in produzione  o in commercio
@@ -95,28 +99,28 @@ COUNT(*) "num fatture tipo A"
 FROM fatture
 WHERE tipologia = 'A'
 GROUP BY anno
-HAVING COUNT(*) > 2
+HAVING COUNT(*) >= 2;
 
 --elenco fatture con nome fornitore
 SELECT fa.numerofatture,fa.importo,
 fa.iva,fa.datafattura,fo.denominazione 
-FROM fatture AS fa FULL JOIN fornitori AS fo 
+FROM fatture AS fa INNER JOIN fornitori AS fo 
 ON fa.numerofornitore = fo.numerofornitore;
 
 --tot importi fatture divisi per residenza cliente
-SELECT c.regioneresidenza, SUM(f.importo) 
-FROM fatture AS f FULL JOIN clienti AS c
+SELECT c.regioneresidenza AS Regione, SUM(f.importo) AS Somma
+FROM fatture AS f INNER JOIN clienti AS c
 ON f.idcliente = c.numerocliente GROUP BY c.regioneresidenza;
 
 --num di clienti nati nell 80 con almeno una fattura > 50€
-SELECT c.nome, 
-COUNT(c.numerocliente)"Fatture superiori a 50€ da clienti del 1980",
+SELECT COUNT(c.numerocliente)"Fatture > 50€ da clienti del 1980",
+c.nome,
 f.importo FROM fatture AS f FULL JOIN clienti 
 AS c ON f.idcliente = c.numerocliente 
 WHERE c.datanascita = 1980 AND f.importo > 50 
 GROUP BY c.nome,f.importo;
 
 --colonna Denominazione con nome+"-"+cognome per i soli residenti della Lombardia
-SELECT concat(nome,'-',cognome) "Denominazione" 
+SELECT concat(nome,' - ',cognome) "Denominazione" 
 FROM clienti 
 WHERE regioneresidenza = 'Lombardia';
